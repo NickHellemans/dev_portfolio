@@ -49,6 +49,9 @@ import tripguide from "./tripguide.png";
 import dev_portfolio from "./projects/dev_portfolio.png";
 import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
+import linkedin from "./socials/linkedin.png";
+import email from "./socials/email.png";
+import resume from "./socials/resume.pdf";
 
 export {
   logo,
@@ -99,4 +102,7 @@ export {
   dev_portfolio,
   raytracer,
   compiler,
+  linkedin,
+  email,
+  resume,
 };

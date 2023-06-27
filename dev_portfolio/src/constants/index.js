@@ -43,6 +43,10 @@ import {
   dev_portfolio,
   raytracer,
   compiler,
+  linkedin,
+  github,
+  email,
+  resume,
 } from "../assets";
 
 export const navLinks = [
@@ -303,5 +307,24 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const socials = [
+  {
+    name: "LinkedIn",
+    image: linkedin,
+    url: "https://www.linkedin.com/in/nickhell/",
+  },  
+  {
+    name: "Github",
+    image: github,
+    url: "https://github.com/NickHellemans",
+  },
+  {
+    name: "Email",
+    image: email,
+    url: "nick-hellemans@hotmail.com",
+  }
+];
+
+
+export { services, technologies, experiences, testimonials, projects, socials, resume };
 
