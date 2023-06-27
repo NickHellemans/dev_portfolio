@@ -46,8 +46,9 @@ import bebold from "./company/bebold.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
-
+import dev_portfolio from "./projects/dev_portfolio.png";
+import raytracer from "./projects/raytracer.png";
+import compiler from "./projects/compiler.png";
 
 export {
   logo,
@@ -95,4 +96,7 @@ export {
   java,
   aws,
   adobe_xd,
+  dev_portfolio,
+  raytracer,
+  compiler,
 };

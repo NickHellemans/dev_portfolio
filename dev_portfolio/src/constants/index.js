@@ -40,6 +40,9 @@ import {
   EF,
   nerfstudio,
   adobe_xd,
+  dev_portfolio,
+  raytracer,
+  compiler,
 } from "../assets";
 
 export const navLinks = [
@@ -240,16 +243,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Development portfolio",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "React web application to serve as a digital resume. Used as a showcase for all my skills and experiences. It is the web application u are currently browsing! Talk about inception eh?",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "treejs",
         color: "green-text-gradient",
       },
       {
@@ -257,50 +260,46 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: dev_portfolio,
+    source_code_link: "https://github.com/NickHellemans/dev_portfolio",
   },
   {
-    name: "Job IT",
+    name: "C++ Raytracer",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Real-time ray tracer as an introduction to programming low level graphics and all the theory behind it. Currently it supports materials, shadows, interactive 3D camera, multiple objects, path tracing & multithreading.",
     tags: [
       {
-        name: "react",
+        name: "C++",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Dear ImGui",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "glm",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: raytracer,
+    source_code_link: "https://github.com/NickHellemans/HelloRayTracing",
   },
   {
-    name: "Trip Guide",
+    name: "Teeny Tiny compiler",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Implemented a small compiler in C++ for the language \"Teeny Tiny\" which is a dialect of BASIC that will compile to C. The language allows a variety of the basic operations that you'd expect from a programming language.",
     tags: [
       {
-        name: "nextjs",
+        name: "C++",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "C",
         color: "green-text-gradient",
       },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: compiler,
+    source_code_link: "https://github.com/NickHellemans/teenytinycompiler",
   },
 ];
 
