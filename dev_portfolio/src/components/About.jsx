@@ -19,7 +19,7 @@ const ServiceCard = ({index, title, icon}) => {
   )
 }
 
-const About = () => {
+const InnerAbout = () => {
   return (
     <>
     <motion.div  variants={textVariant()}>
@@ -27,7 +27,7 @@ const About = () => {
       <h2 className={styles.sectionHeadText}>Overview</h2>
     </motion.div>
     <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-      I'm a skilled software developer with experience in C, C++, ... . Eager to learn. Check out my projects to see what I have worked on!
+      I&apos;m a skilled software developer with experience in C, C++, ... . Eager to learn. Check out my projects to see what I have worked on!
     </motion.p>
     <div className='mt-20 flex flex-wrap gap-10'>
       {services.map((service, index) => (
@@ -38,4 +38,6 @@ const About = () => {
   )
 }
 
-export default SectionWrapper(About, "about")
+const About = SectionWrapper(InnerAbout, "about")
+
+export default About

@@ -25,6 +25,21 @@ import {
   threejs,
   ap,
   bebold,
+  c,
+  cpp,
+  csharp,
+  dotnet,
+  python,
+  sql,
+  firebase,
+  opengl,
+  glm,
+  unity,
+  java,
+  aws,
+  EF,
+  nerfstudio,
+  adobe_xd,
 } from "../assets";
 
 export const navLinks = [
@@ -75,16 +90,28 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "C#",
+    icon: csharp,
+  },
+  {
+    name: ".NET",
+    icon: dotnet,
+  },
+  {
+    name: "Python",
+    icon: python,
   },
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -93,6 +120,14 @@ const technologies = [
   {
     name: "Node JS",
     icon: nodejs,
+  },
+  {
+    name: "SQL",
+    icon: sql,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
   },
   {
     name: "MongoDB",
@@ -114,6 +149,38 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "OpenGL",
+    icon: opengl,
+  },
+  {
+    name: "glm",
+    icon: glm,
+  },
+  {
+    name: "Unity",
+    icon: unity,
+  },
+  {
+    name: "Enity Framework",
+    icon: EF,
+  },
+  {
+    name: "Nerfstudio",
+    icon: nerfstudio,
+  },
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "Adobe XD",
+    icon: adobe_xd,
+  },
 ];
 
 const experiences = [
@@ -126,7 +193,8 @@ const experiences = [
     points: [
       "Research within the field of Novel View Synthesis",
       "Capturing fotorealistic data to create real life virtual nature scene experiences in a cost efficient way",
-      "Researching an optimal camera rig using Neural Radiance Fields to capture data to create these virtual scenes"
+      "Researching an optimal camera rig when using Neural Radiance Fields to capture data to create these virtual scenes",
+      "Neural Radiance Field development using Nerfstudio framework"
     ],
   },
   {
@@ -138,7 +206,7 @@ const experiences = [
     points: [
     "Developing a data model exporter web application from scratch with React, Node, Express & Firebase",
     "Individual project to provide an end-to-end solution",
-    "Developing a dashboard to display important data in the office with React"
+    "Developing a dashboard to display important real-time data in the office with React"
     ],
   },
 ];

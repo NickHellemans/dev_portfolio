@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -19,7 +19,22 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
+import c from "./tech/clogo.png";
+import cpp from "./tech/cpp_logo.png";
+import python from "./tech/python.png";
+import csharp from "./tech/csharp.png";
+import dotnet from "./tech/dotnet.png";
+import sql from "./tech/sql.png";
+import firebase from "./tech/firebase.png";
+import opengl from "./tech/opengl.png";
+import glm from "./tech/glm.png";
+import unity from "./tech/unity.png";
+import EF from "./tech/ef.png";
+import nerfstudio from "./tech/nerfstudio.png";
+import java from "./tech/java.png";
+import aws from "./tech/aws.png";
+import adobe_xd from "./tech/adobe_xd.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -31,6 +46,7 @@ import bebold from "./company/bebold.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
 
 
 export {
@@ -55,6 +71,13 @@ export {
   tailwind,
   typescript,
   threejs,
+  c,
+  cpp,
+  python,
+  csharp,
+  dotnet,
+  sql,
+  firebase,
   meta,
   shopify,
   starbucks,
@@ -64,4 +87,12 @@ export {
   carrent,
   jobit,
   tripguide,
+  opengl,
+  glm,
+  unity,
+  EF,
+  nerfstudio,
+  java,
+  aws,
+  adobe_xd,
 };
