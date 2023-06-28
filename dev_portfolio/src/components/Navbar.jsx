@@ -14,7 +14,7 @@ const Navbar = () => {
           setActive("");
           window.scrollTo(0, 0);
         }}>
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
+          <img src={logo} alt="logo" className='w-12 h-12 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Nick&nbsp;<span className='hidden sm:hidden md:block'>| Hellemans</span>
           </p>
