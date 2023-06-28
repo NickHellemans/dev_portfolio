@@ -66,5 +66,5 @@ const InnerWorks = () => {
     </>
   )
 }
-const Works = SectionWrapper(InnerWorks, "");
+const Works = SectionWrapper(InnerWorks, "projects");
 export default Works;

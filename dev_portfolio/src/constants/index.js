@@ -59,6 +59,14 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -83,7 +91,7 @@ const services = [
   },
 ];
 
-const technologies = [
+const languages = [
   {
     name: "HTML 5",
     icon: html,
@@ -109,12 +117,23 @@ const technologies = [
     icon: csharp,
   },
   {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Java",
+    icon: java,
+  },
+];
+
+const frameworks = [
+  {
     name: ".NET",
     icon: dotnet,
   },
   {
-    name: "Python",
-    icon: python,
+    name: "Enity Framework",
+    icon: EF,
   },
   {
     name: "React JS",
@@ -125,9 +144,29 @@ const technologies = [
     icon: tailwind,
   },
   {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "OpenGL",
+    icon: opengl,
+  },
+  {
+    name: "glm",
+    icon: glm,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
+  {
+    name: "Nerfstudio",
+    icon: nerfstudio,
+  },
+  
+];
+
+const databases = [
   {
     name: "SQL",
     icon: sql,
@@ -140,53 +179,33 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+];
+const tools = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
     icon: docker,
   },
   {
-    name: "OpenGL",
-    icon: opengl,
-  },
-  {
-    name: "glm",
-    icon: glm,
-  },
-  {
     name: "Unity",
     icon: unity,
-  },
-  {
-    name: "Enity Framework",
-    icon: EF,
-  },
-  {
-    name: "Nerfstudio",
-    icon: nerfstudio,
-  },
-  {
-    name: "Java",
-    icon: java,
   },
   {
     name: "AWS",
     icon: aws,
   },
+];
+const design_tools = [
   {
     name: "Adobe XD",
     icon: adobe_xd,
+  },
+  {
+    name: "figma",
+    icon: figma,
   },
 ];
 
@@ -326,5 +345,5 @@ const socials = [
 ];
 
 
-export { services, technologies, experiences, testimonials, projects, socials, resume };
+export { services, experiences, testimonials, projects, socials, resume, tools, design_tools, databases, languages, frameworks};
 
