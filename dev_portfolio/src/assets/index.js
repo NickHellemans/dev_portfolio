@@ -1,7 +1,7 @@
 import logo from "./logo.png";
 import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
+import ai from "./ai.png";
+import graphics from "./graphics.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -16,9 +16,6 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.png";
 import c from "./tech/clogo.png";
 import cpp from "./tech/cpp_logo.png";
@@ -35,21 +32,16 @@ import nerfstudio from "./tech/nerfstudio.png";
 import java from "./tech/java.png";
 import aws from "./tech/aws.png";
 import adobe_xd from "./tech/adobe_xd.png";
+import tailwind from "./tech/tailwind.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import ap from "./company/ap.png";
 import bebold from "./company/bebold.png";
 import vub from "./company/vub.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 import dev_portfolio from "./projects/dev_portfolio.png";
 import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
+
 import linkedin from "./socials/linkedin.png";
 import email from "./socials/email.png";
 import resume from "./socials/resume.pdf";
@@ -57,8 +49,8 @@ import resume from "./socials/resume.pdf";
 export {
   logo,
   backend,
-  creator,
-  mobile,
+  ai,
+  graphics,
   web,
   github,
   menu,
@@ -72,9 +64,6 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
-  tailwind,
-  typescript,
   threejs,
   c,
   cpp,
@@ -83,15 +72,8 @@ export {
   dotnet,
   sql,
   firebase,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   ap,
   bebold,
-  carrent,
-  jobit,
-  tripguide,
   opengl,
   glm,
   unity,
@@ -100,6 +82,7 @@ export {
   java,
   aws,
   adobe_xd,
+  tailwind,
   dev_portfolio,
   raytracer,
   compiler,

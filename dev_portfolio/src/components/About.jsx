@@ -22,7 +22,7 @@ const ServiceCard = ({index, title, icon}) => {
 
 const DegreeCard = ({index, name, minor, school, grade, date, icon}) => (
   <Tilt>
-  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-black-200 p-10 rounded-3xl sm:w-[320px] w-full h-auto'>
+  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='border border-pink-400 bg-black-200 p-10 rounded-3xl w-[320px] h-[250px] flex items-center'>
     <div className='mt-1'>
       <p className='text-white tracking-wider text-[18px]'>{name} <span className='blue-text-gradient'>@</span> {school}</p>
       <p className='text-secondary font-small text-[14px]'>{minor ? `Minor: ${minor}` : ``}</p>
@@ -31,7 +31,7 @@ const DegreeCard = ({index, name, minor, school, grade, date, icon}) => (
           <p className='text-white font-medium text-[14px] blue-text-gradient italic'>{grade}</p>
           <p className='mt-1 text-secondary text-[12px]'>{date}</p>
         </div>
-        <img src={icon} alt={school} className='w-13 h-10 rounded-lg border border-indigo-500/100 object-cover'/>
+        <img src={icon} alt={school} className='w-13 h-10 rounded-lg border border-pink-400 object-cover'/>
       </div>
     </div>
   </motion.div>
@@ -62,7 +62,7 @@ const InnerAbout = () => {
       </div>
 
     </div>
-    <div className={`w-auto -mt-14 pb-10 flex flex-wrap sm:flex-col md:flex-col lg:flex-row justify-center items-center gap-7`}>
+    <div className={`-mt-14 pb-10 flex flex-wrap sm:flex-col md:flex-col lg:flex-row justify-center items-center gap-7`}>
         {degrees.map((degree, index) => (
           <DegreeCard 
           key={degree.name}
