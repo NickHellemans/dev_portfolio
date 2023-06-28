@@ -12,8 +12,8 @@ const InnerTech = () => {
         <p className={styles.sectionSubText}>Technologies I have worked with</p>
         <h2 className={styles.sectionHeadText}>Skills</h2>
       </motion.div>
-
-      <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Languages</h3>
+      <p>test</p>
+      {/* <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Languages</h3>
       <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
         {languages.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
@@ -56,7 +56,7 @@ const InnerTech = () => {
             <BallCanvas icon={tech.icon} />
           </div>
         ))}
-      </div>
+      </div> */}
     </>
 
   )
