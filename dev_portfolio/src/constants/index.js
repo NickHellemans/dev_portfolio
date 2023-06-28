@@ -46,6 +46,7 @@ import {
   linkedin,
   github,
   email,
+  vub,
   resume,
 } from "../assets";
 
@@ -78,16 +79,42 @@ const services = [
     icon: web,
   },
   {
-    title: "Graphics Developer",
-    icon: mobile,
-  },
-  {
     title: "Backend Developer",
     icon: backend,
   },
   {
+    title: "Graphics Enthousiast",
+    icon: mobile,
+  },
+  {
     title: "AI Specialist",
     icon: creator,
+  },
+];
+
+const degrees = [
+  {
+    name: "Graduate programming",
+    minor: null,
+    school: "AP Hogeschool",
+    grade: "Summa cum laude",
+    date: "June 2021",
+    icon:ap,
+  },
+  {
+    name: "Bachelor Applied Informatics",
+    minor: "Artificial Intelligence",
+    school: "AP Hogeschool",
+    grade: "Magna cum laude",
+    date: "June 2023",
+    icon:ap,
+  },
+  {
+    name: "Master Applied Informatics",
+    school: "VUB",
+    grade: "TBE",
+    date: "Expected June 2026",
+    icon:vub,
   },
 ];
 
@@ -131,10 +158,10 @@ const frameworks = [
     name: ".NET",
     icon: dotnet,
   },
-  {
-    name: "Enity Framework",
-    icon: EF,
-  },
+  // {
+  //   name: "Enity Framework",
+  //   icon: EF,
+  // },
   {
     name: "React JS",
     icon: reactjs,
@@ -345,5 +372,5 @@ const socials = [
 ];
 
 
-export { services, experiences, testimonials, projects, socials, resume, tools, design_tools, databases, languages, frameworks};
+export { services, degrees, experiences, testimonials, projects, socials, resume, tools, design_tools, databases, languages, frameworks};
 

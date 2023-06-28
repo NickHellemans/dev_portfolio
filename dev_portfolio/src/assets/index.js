@@ -42,6 +42,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import ap from "./company/ap.png";
 import bebold from "./company/bebold.png";
+import vub from "./company/vub.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -105,4 +106,5 @@ export {
   linkedin,
   email,
   resume,
+  vub,
 };
