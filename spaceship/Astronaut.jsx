@@ -39,8 +39,8 @@ export default function AstronautCanvas() {
       <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} castShadow color="#0c8cbf" />
 
-      <Float position={[1, 1.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={2} floatIntensity={6} speed={1.5}>
-        <Spaceman scale={1}>
+      <Float position={[1, 1.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
+        <Spaceman scale={0.2}>
           <object3D position={[-0.6, 2, 0]} ref={spaceman} />
         </Spaceman>
       </Float>
