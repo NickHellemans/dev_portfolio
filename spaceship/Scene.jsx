@@ -61,17 +61,17 @@ export default function SpaceshipCanvas() {
 
   const [isMobile, setIsMobile] = useState(false);
 
+  const handleWindowSizeChange = () => {
+    setIsMobile(window.innerWidth <= 1000);
+  }
+  
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width:1250px)");
-    setIsMobile(mediaQuery.matches);
-    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-
+    window.addEventListener('resize', handleWindowSizeChange);
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      window.removeEventListener('resize', handleWindowSizeChange);
     }
+  }, []);
 
-  }, [])
   return (
     <Canvas camera={{ position: [0, 2, 3] }} className='w-[20px]'>
       <ambientLight intensity={0.2} />
