@@ -59,11 +59,11 @@ export default function SpaceshipCanvas() {
   const spaceman = useRef()
   const ship = useRef()
   return (
-    <Canvas shadows camera={{ position: [0, 2, 3] }}>
+    <Canvas camera={{ position: [0, 2, 3] }}>
       <ambientLight intensity={0.2} />
       <directionalLight position={[-10, 0, -5]} intensity={1} color="red" />
       <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
-      <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} castShadow color="#0c8cbf" />
+      <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#0c8cbf" />
 
       <Float scale={0.75} position={[0, 0, 0]} rotation={[0, 0.6, 0]}>
         <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
@@ -80,9 +80,9 @@ export default function SpaceshipCanvas() {
       {/* <Backdrop castShadow floor={2} position={[0, -0.5, -3]} scale={[50, 10, 4]}>
         <meshStandardMaterial color="#353540" envMapIntensity={0.1} />
       </Backdrop> */}
-      <ContactShadows position={[0, -0.485, 0]} scale={5} blur={1.5} far={1} />
-      <Environment preset="city" />
-      <OrbitControls makeDefault />
+      {/* <ContactShadows position={[0, -0.485, 0]} scale={5} blur={1.5} far={1} /> */}
+      <Environment enableZoom={false} preset="city" />
+      <OrbitControls makeDefault enableZoom={false} />
     </Canvas>
   )
 }
