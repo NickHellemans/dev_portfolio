@@ -30,7 +30,7 @@ Spaceman.displayName = "spaceman";
 
 // One-click copy/paste from the poimandres market: https://market.pmnd.rs/model/low-poly-spaceship
 const Ship = forwardRef((props, ref) => {
-  const { nodes, materials } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/low-poly-spaceship/model.gltf')
+  const { nodes, materials } = useGLTF('./spaceship/spaceship.glb')
   useLayoutEffect(() => {
     Object.values(materials).forEach((material) => {
       material.roughness = 0
