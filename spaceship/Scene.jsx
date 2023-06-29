@@ -80,29 +80,29 @@ export default function SpaceshipCanvas() {
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#0c8cbf" />
 
 {
-  isMobile ? 
-  null
-  :
-  <>
-  <Float scale={isMobile ? 0.25 : 0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
-  <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
-    <Ship ref={ship} />
-  </PivotControls>
-</Float>
+    isMobile ? 
+    null
+    :
+    <>
+    <Float scale={isMobile ? 0.25 : 0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
+    <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
+      <Ship ref={ship} />
+    </PivotControls>
+  </Float>
 
-<Float position={[1, 0.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
-<Spaceman scale={isMobile ? 0.1 : 0.2}>
-  <object3D position={[-0.6, 2, 0]} ref={spaceman} />
-</Spaceman>
-</Float>
-<Cable start={ship} end={spaceman} />
-{/* <Backdrop castShadow floor={2} position={[0, -0.5, -3]} scale={[50, 10, 4]}>
-<meshStandardMaterial color="#353540" envMapIntensity={0.1} />
-</Backdrop> */}
-{/* <ContactShadows position={[0, -0.485, 0]} scale={5} blur={1.5} far={1} /> */}
-<Environment enableZoom={false} preset="city" />
-<OrbitControls makeDefault enableZoom={false} />
-</>
+  <Float position={[1, 0.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
+  <Spaceman scale={isMobile ? 0.1 : 0.2}>
+    <object3D position={[-0.6, 2, 0]} ref={spaceman} />
+  </Spaceman>
+  </Float>
+  <Cable start={ship} end={spaceman} />
+  {/* <Backdrop castShadow floor={2} position={[0, -0.5, -3]} scale={[50, 10, 4]}>
+  <meshStandardMaterial color="#353540" envMapIntensity={0.1} />
+  </Backdrop> */}
+  {/* <ContactShadows position={[0, -0.485, 0]} scale={5} blur={1.5} far={1} /> */}
+  <Environment enableZoom={false} preset="city" />
+  <OrbitControls makeDefault enableZoom={false} />
+  </>
 
 }
 
