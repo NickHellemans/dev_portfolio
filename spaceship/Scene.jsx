@@ -59,19 +59,6 @@ export default function SpaceshipCanvas() {
   const spaceman = useRef()
   const ship = useRef()
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width:850px)");
-    setIsMobile(mediaQuery.matches);
-    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-    }
-
-  }, [])
   return (
     <Canvas camera={{ position: [0, 2, 3] }} className='w-[20px]'>
       <ambientLight intensity={0.2} />
@@ -79,19 +66,14 @@ export default function SpaceshipCanvas() {
       <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#0c8cbf" />
 
-{
-    isMobile ? 
-    null
-    :
-    <>
-    <Float scale={isMobile ? 0.25 : 0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
+    <Float scale={0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
     <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
       <Ship ref={ship} />
     </PivotControls>
   </Float>
 
   <Float position={[1, 0.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
-  <Spaceman scale={isMobile ? 0.1 : 0.2}>
+  <Spaceman scale={0.2}>
     <object3D position={[-0.6, 2, 0]} ref={spaceman} />
   </Spaceman>
   </Float>
@@ -102,10 +84,6 @@ export default function SpaceshipCanvas() {
   {/* <ContactShadows position={[0, -0.485, 0]} scale={5} blur={1.5} far={1} /> */}
   <Environment enableZoom={false} preset="city" />
   <OrbitControls makeDefault enableZoom={false} />
-  </>
-
-}
-
 
   <Preload all />
     </Canvas>
