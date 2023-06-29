@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { forwardRef, useLayoutEffect, useRef } from 'react'
+import React, { forwardRef, useLayoutEffect, useEffect, useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Environment, useGLTF, Float, PivotControls, QuadraticBezierLine, Backdrop, ContactShadows } from '@react-three/drei'
 
@@ -58,21 +58,35 @@ function Cable({ start, end, v1 = new THREE.Vector3(), v2 = new THREE.Vector3() 
 export default function SpaceshipCanvas() {
   const spaceman = useRef()
   const ship = useRef()
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    }
+
+  }, [])
   return (
-    <Canvas camera={{ position: [0, 2, 3] }}>
+    <Canvas camera={{ position: [0, 2, 3] }} className='w-[20px]'>
       <ambientLight intensity={0.2} />
       <directionalLight position={[-10, 0, -5]} intensity={1} color="red" />
       <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#0c8cbf" />
 
-      <Float scale={0.75} position={[0, 0, 0]} rotation={[0, 0.6, 0]}>
+      <Float scale={isMobile ? 0.25 : 0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
         <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
           <Ship ref={ship} />
         </PivotControls>
       </Float>
 
-      <Float position={[1, 1.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
-        <Spaceman scale={0.2}>
+      <Float position={[1, 0.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
+        <Spaceman scale={isMobile ? 0.1 : 0.2}>
           <object3D position={[-0.6, 2, 0]} ref={spaceman} />
         </Spaceman>
       </Float>
