@@ -2,7 +2,7 @@
   "name": "dev_portfolio",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://NickHellemans.github.io/dev_portfolio/",
+  "homepage": "https://NickHellemans.github.io/dev_portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",

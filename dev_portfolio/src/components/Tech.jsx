@@ -12,51 +12,65 @@ const InnerTech = () => {
         <p className={styles.sectionSubText}>Technologies I have worked with</p>
         <h2 className={styles.sectionHeadText}>Skills</h2>
       </motion.div>
-      <p>test</p>
-      {/* <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Languages</h3>
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
+      <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Languages</h3>
+      <div className='flex flex-row flex-wrap justify-center gap-1 mt-10 mb-10'>
         {languages.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
-            <BallCanvas icon={tech.icon} />
+            {/* <BallCanvas icon={tech.icon} /> */}
+            <div className='w-30 h-30 rounded-full flex justify-center items-center'>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+            </div>
           </div>
         ))}
       </div>
 
       <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Frameworks & Libaries</h3>
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
+      <div className='flex flex-row flex-wrap justify-center gap-1 mt-10 mb-10'>
         {frameworks.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
-            <BallCanvas icon={tech.icon} />
+            {/* <BallCanvas icon={tech.icon} /> */}
+            <div className='w-30 h-30 rounded-full flex justify-center items-center'>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+            </div>
           </div>
         ))}
       </div>
 
       <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Databases</h3>
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
+      <div className='flex flex-row flex-wrap justify-center gap-1 mt-10 mb-10'>
         {databases.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
-            <BallCanvas icon={tech.icon} />
+            {/* <BallCanvas icon={tech.icon} /> */}
+                        <div className='w-30 h-30 rounded-full flex justify-center items-center'>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+            </div>
           </div>
         ))}
       </div>
 
       <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Other tools</h3>
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
+      <div className='flex flex-row flex-wrap justify-center gap-1 mt-10 mb-10'>
         {tools.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
-            <BallCanvas icon={tech.icon} />
+            {/* <BallCanvas icon={tech.icon} /> */}
+            <div className='w-30 h-30 rounded-full flex justify-center items-center'>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+            </div>
           </div>
         ))}
       </div>
 
       <h3 className={`${styles.sectionSubTitleText} flex justify-center`}>Design tools</h3>
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-10 mb-10'>
+      <div className='flex flex-row flex-wrap justify-center gap-1 mt-10 mb-10'>
         {design_tools.map((tech) => (
           <div className='w-24 h-24' key={tech.name}>
-            <BallCanvas icon={tech.icon} />
+            {/* <BallCanvas icon={tech.icon} /> */}
+            <div className='w-30 h-30 rounded-full flex justify-center items-center'>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+            </div>
           </div>
         ))}
-      </div> */}
+      </div>
     </>
 
   )

@@ -4,9 +4,9 @@ import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import { socials, resume } from '../constants';
 import { useState, useRef } from 'react';
-import { Tilt } from 'react-tilt';
 import { EarthCanvas } from './canvas';
 import { slideIn } from '../utils/motion';
+import AstronautCanvas from './canvas/Earth';
 
 const InnerContact = () => {
 
@@ -32,35 +32,22 @@ const InnerContact = () => {
           <h2 className={styles.sectionHeadText}>Contact</h2>
           <div className='mt-12 flex justify-center gap-8'>
             {socials.map((social, index) => (
-              <motion.div key={social.name} variants={fadeIn("", "spring", index * 0.5, 0.75)}>
-                <Tilt options={{
-                  max: 45,
-                  scale: 1,
-                  speed: 450,
-                }}
-                >
+              <motion.div key={social.name} variants={fadeIn("", "spring", index * 0.5, 0.75)} className='w-20 h-20'>
                   <a href={social.name === "Email" ? `mailto: ${social.url}` : social.url} target='_blank' rel='noreferrer'>
-                    <img src={social.image} className='w-20 h-20 object-contain p-1 m-2 cursor-pointer' />
+                    <img src={social.image} className='object-contain p-1 m-2 hover:scale-150 cursor-pointer' />
                   </a>
-                </Tilt>
               </motion.div>
             ))}
           </div>
-          <Tilt options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}>
-            <div className='mt-5 flex justify-center items-center'>
-              <button className="bg-gray-300 hover:bg-[#915eff] text-gray-700 font-bold hover:text-white py-2 px-4 rounded inline-flex items-center" onClick={downloadResume}>
+            <div className='mt-12 flex justify-center items-center'>
+              <button className="w-1/2 bg-gray-300 hover:bg-[#915eff] text-gray-700 font-bold hover:text-white py-2 px-4 rounded inline-flex justify-center items-center" onClick={downloadResume}>
                 <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
                 <span>Resume</span>
               </button>
             </div>
-          </Tilt>
         </motion.div>
-        <motion.div variants={slideIn("right", "tween", 0.2, 1)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
-          <EarthCanvas />
+        <motion.div variants={slideIn("right", "tween", 0.2, 1)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[400px]'>
+          <AstronautCanvas />
         </motion.div>
       </div>
     </>
