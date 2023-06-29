@@ -33,10 +33,9 @@ Spaceman.displayName = "spaceman";
 export default function AstronautCanvas() {
   const spaceman = useRef()
   return (
-    <Canvas shadows camera={{ position: [0, 2, 3] }}>
+    <Canvas camera={{ position: [0, 2, 3] }}>
       <ambientLight intensity={0.2} />
       <directionalLight position={[-10, 0, -5]} intensity={1} color="red" />
-      <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} castShadow color="#0c8cbf" />
 
       <Float position={[1, 1.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
