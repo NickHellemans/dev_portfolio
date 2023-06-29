@@ -1,5 +1,4 @@
 import React from 'react';
-import {Tilt} from 'react-tilt';
 import {motion} from 'framer-motion';
 import {styles} from '../style'
 import {services} from '../constants/index'
@@ -9,19 +8,17 @@ import { degrees } from '../constants';
 
 const ServiceCard = ({index, title, icon}) => {
   return (
-    <Tilt className='xs:w-[250px] w-full'>
-      <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
+      <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
       <div options={{ max: 45, scale: 1, speed: 450}} className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
         <img src={icon} alt={title} className='w-16 h-16 object-contain'/>
         <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
       </div>
       </motion.div>
-    </Tilt>
+
   )
 }
 
 const DegreeCard = ({index, name, minor, school, grade, date, icon}) => (
-  <Tilt>
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='border border-pink-400 bg-black-200 p-10 rounded-3xl w-[320px] h-[250px] flex items-center'>
     <div className='mt-1'>
       <p className='text-white tracking-wider text-[18px]'>{name} <span className='blue-text-gradient'>@</span> {school}</p>
@@ -35,7 +32,6 @@ const DegreeCard = ({index, name, minor, school, grade, date, icon}) => (
       </div>
     </div>
   </motion.div>
-  </Tilt>
 )
 
 const InnerAbout = () => {
