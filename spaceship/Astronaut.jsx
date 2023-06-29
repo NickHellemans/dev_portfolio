@@ -27,7 +27,8 @@ const Spaceman = forwardRef(({ children, ...props }, ref) => {
 
 Spaceman.displayName = "spaceman";
 
-export default function AstronautCanvas() {
+export default function AstronautCanvas({position = [-0.6, 2, 0], scale = 0.2}) {
+  console.log(position);
   const spaceman = useRef()
   return (
     <Canvas camera={{ position: [0, 2, 3] }}>
@@ -36,8 +37,9 @@ export default function AstronautCanvas() {
       <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} castShadow color="#0c8cbf" />
 
     <Suspense>
-      <Float position={[1, 1.1, -0.5]} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
-        <Spaceman scale={0.2}>
+    {/* [1, 1.1, -0.5] */}
+      <Float position={position} rotation={[Math.PI / 3.5, 0, 0]} rotationIntensity={4} floatIntensity={6} speed={1.5}>
+        <Spaceman scale={scale}>
           <object3D position={[-0.6, 2, 0]} ref={spaceman} />
         </Spaceman>
       </Float>
