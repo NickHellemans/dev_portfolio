@@ -27,7 +27,7 @@ const Spaceman = forwardRef(({ children, ...props }, ref) => {
 
 Spaceman.displayName = "spaceman";
 
-export default function AstronautCanvas({position = [-0.6, 2, 0], scale = 0.2}) {
+export default function AstronautCanvas({position = [1, 1.1, -0.5], scale = 0.2}) {
   console.log(position);
   const spaceman = useRef()
   return (

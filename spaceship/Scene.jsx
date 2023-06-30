@@ -33,7 +33,7 @@ const Ship = forwardRef((props, ref) => {
   const { nodes, materials } = useGLTF('./spaceship/spaceship.glb')
   useLayoutEffect(() => {
     Object.values(materials).forEach((material) => {
-      material.roughness = 0
+      material.roughness = 0.2
     })
   })
   return (
@@ -62,9 +62,9 @@ export default function SpaceshipCanvas() {
   return (
     <Canvas camera={{ position: [0, 2, 3] }} className='w-[20px]'>
       <ambientLight intensity={0.2} />
-      <directionalLight position={[-10, 0, -5]} intensity={1} color="red" />
+      <directionalLight position={[-10, 0, -5]} intensity={5} color="#915eff" />
       <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
-      <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#0c8cbf" />
+      <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} color="#915eff" />
 
     <Float scale={0.75} position={[0, -0.5, 0]} rotation={[0, 0.6, 0]}>
     <PivotControls anchor={[0, 0.7, 0.09]} depthTest={true} scale={0.5} lineWidth={2}>
