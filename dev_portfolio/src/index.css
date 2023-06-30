@@ -29,6 +29,24 @@ body{
   color: white;
 }
 
+svg{
+  width: 32px;
+  height: 32px;
+  fill:#aaa6c3;
+}
+
+svg:hover {
+  fill: #915eff;
+}
+
+#download_resume:hover {
+  fill: white;
+}
+
+#contact_socials svg{
+  width: 48px;
+  height: 48px;
+}
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

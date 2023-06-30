@@ -3,7 +3,8 @@ import backend from "./backend.png";
 import ai from "./ai.png";
 import graphics from "./graphics.png";
 import web from "./web.png";
-import github from "./github.png";
+import {ReactComponent as Github} from "./socials/github-white.svg";
+import github from "./socials/github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -43,9 +44,12 @@ import dev_portfolio from "./projects/dev_portfolio.png";
 import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
 
+import {ReactComponent as Linkedin} from "./socials/linkedin.svg";
 import linkedin from "./socials/linkedin.png";
-import email from "./socials/email.png";
+import {ReactComponent as Email} from "./socials/email.svg";
+import  email from "./socials/email.png";
 import resume from "./socials/resume.pdf";
+
 
 export {
   logo,
@@ -53,6 +57,7 @@ export {
   ai,
   graphics,
   web,
+  Github,
   github,
   menu,
   close,
@@ -87,10 +92,11 @@ export {
   dev_portfolio,
   raytracer,
   compiler,
+  Linkedin,
   linkedin,
+  Email,
   email,
   resume,
   vub,
   mysql,
-  
 };

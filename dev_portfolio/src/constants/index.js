@@ -34,12 +34,15 @@ import {
   dev_portfolio,
   raytracer,
   compiler,
-  linkedin,
-  github,
-  email,
+  Linkedin,
+  Github,
+  Email,
   vub,
   resume,
   mysql,
+  github,
+  email, 
+  linkedin,
 } from "../assets";
 
 export const navLinks = [
@@ -338,5 +341,5 @@ const socials = [
 ];
 
 
-export { services, degrees, experiences, projects, socials, resume, tools, design_tools, databases, languages, frameworks};
+export { services, degrees, experiences, projects, socials, resume, tools, design_tools, databases, languages, frameworks, Github, Linkedin, Email};
 

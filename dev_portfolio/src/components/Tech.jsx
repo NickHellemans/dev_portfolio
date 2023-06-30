@@ -33,7 +33,7 @@ const InnerTech = () => {
                 'focus:outline-none focus:ring-2',
                 selected
                 ? 'bg-tertiary shadow'
-                : 'hover:bg-violet-400 hover:text-white'
+                : 'hover:bg-pink-300 hover:text-white'
               )
             }
             >
@@ -46,7 +46,7 @@ const InnerTech = () => {
               'focus:outline-none focus:ring-2',
               selected
               ? 'bg-tertiary shadow'
-              : 'hover:bg-violet-400 hover:text-white'
+              : 'hover:bg-pink-300 hover:text-white'
               )
             }
             onClick={() => setCategory(frameworks)}
@@ -60,7 +60,7 @@ const InnerTech = () => {
               'focus:outline-none focus:ring-2',
               selected
               ? 'bg-tertiary shadow'
-              : 'hover:bg-violet-400 hover:text-white'
+              : 'hover:bg-pink-300 hover:text-white'
               )
             }
             onClick={() => setCategory(databases)}
@@ -74,7 +74,7 @@ const InnerTech = () => {
                 'focus:outline-none focus:ring-2',
                 selected
                   ? 'bg-tertiary shadow'
-                  : 'hover:bg-violet-400 hover:text-white'
+                  : 'hover:bg-pink-300 hover:text-white'
                   )
                 }
                 onClick={() => setCategory(tools)}
@@ -88,7 +88,7 @@ const InnerTech = () => {
               'focus:outline-none focus:ring-2',
               selected
               ? 'bg-tertiary shadow'
-              : 'hover:bg-violet-400 hover:text-white'
+              : 'hover:bg-pink-300 hover:text-white'
               )
             }
             onClick={() => setCategory(design_tools)}

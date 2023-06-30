@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../style'
-import { services } from '../constants/index'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
-import { degrees } from '../constants';
+import { socials, resume, services } from '../constants';
 import { ExperienceV2, Education } from '../components';
 
 import { Tab } from '@headlessui/react'
+import Socials from './Socials';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -37,16 +37,27 @@ const InnerAbout = () => {
       {/* <motion.div  variants={textVariant()}> */}
 
       <p className={styles.sectionSubText}>Introduction</p>
-      <div className='flex items-center'>
+      <div className='flex sm:flex-wrap md:flex-nowrap flex-wrap items-center'>
         <h2 className={styles.sectionHeadText}>About<span className='text-[#915eff]'>.</span></h2>
-        <div className='w-full h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
-      </div>
+        <div className='w-full h-[0px] sm:h-[0px] md:h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
+        <div className='ml-2 flex justify-between items-between gap-2'>
+            <Socials />
+          </div>
+            </div>
       {/* <hr className='border-[#915eff]'/> */}
       {/* </motion.div> */}
       {/* <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'> */}
       <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
         I&apos;m a skilled software developer with experience in C, C++, ... . Eager to learn. Check out my projects to see what I have worked on!
       </p>
+      <div className='mt-8 mb-1 flex justify-center items-center'>
+            <a href={resume} download='nick-hellemans_dev-resume' target='_blank' rel='noreferrer' className='w-auto flex justify-center items-center'>
+              <button className="bg-gray-300 hover:bg-tertiary text-gray-700 font-bold hover:text-white py-2 px-4 rounded inline-flex justify-center items-center">
+                <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                <span>Resume</span>
+              </button>
+            </a>
+          </div>
       {/* </motion.p> */}
       <div className='mt-20 flex flex-wrap justify-center gap-10'>
         {services.map((service, index) => (
@@ -69,7 +80,7 @@ const InnerAbout = () => {
                   'focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-tertiary shadow'
-                    : 'hover:bg-violet-400 hover:text-white'
+                    : 'hover:bg-pink-300 hover:text-white'
                 )
               }
             >
@@ -82,7 +93,7 @@ const InnerAbout = () => {
                   'focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-tertiary shadow'
-                    : 'hover:bg-violet-400 hover:text-white'
+                    : 'hover:bg-pink-300 hover:text-white'
                 )
               }
               onClick={() => setToggleExperience(false)}
