@@ -39,16 +39,13 @@ import {
   email,
   vub,
   resume,
+  mysql,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
     title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
   },
   {
     id: "skills",
@@ -187,6 +184,10 @@ const frameworks = [
 
 const databases = [
   {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
     name: "SQL",
     icon: sql,
   },
@@ -230,15 +231,15 @@ const design_tools = [
 
 const experiences = [
   {
-    title: "Researcher intern",
+    title: "Research intern",
     company_name: "AP Hogeschool - Immersive lab",
     icon: ap,
     iconBg: "#ffff",
     date: "Feb 2023 - May 2023",
     points: [
       "Research within the field of Novel View Synthesis",
-      "Capturing fotorealistic data to create real life virtual nature scene experiences in a cost efficient way",
-      "Researching an optimal camera rig when using Neural Radiance Fields to capture data to create these virtual scenes",
+      "Capturing fotorealistic data to create realistic virtual nature scene experiences in a cost efficient way",
+      "Researched & documented an optimal camera rig when using Neural Radiance Fields to capture data to create these virtual scenes",
       "Neural Radiance Field development using Nerfstudio framework"
     ],
   },
@@ -263,15 +264,15 @@ const projects = [
       "React web application to serve as a digital resume. Used as a showcase for all my skills and experiences. It is the web application u are currently browsing! Talk about inception eh?",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "treejs",
+        name: "Treejs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
@@ -279,7 +280,7 @@ const projects = [
     source_code_link: "https://github.com/NickHellemans/dev_portfolio",
   },
   {
-    name: "C++ Raytracer",
+    name: "Realtime Raytracer",
     description:
       "Real-time ray tracer as an introduction to programming low level graphics and all the theory behind it. Currently it supports materials, shadows, interactive 3D camera, multiple objects, path tracing & multithreading.",
     tags: [
@@ -288,11 +289,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "Dear ImGui",
+        name: "ImGui",
         color: "green-text-gradient",
       },
       {
-        name: "glm",
+        name: "Glm",
         color: "pink-text-gradient",
       },
     ],

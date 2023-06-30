@@ -33,12 +33,16 @@ const ExperienceCard = ({experience}) => (
 const InnerExperience = () => {
   return (
    <>
-   <motion.div variants={textVariant()}>
-      <p className={styles.sectionSubText}>What I have done so far</p>
-      <h2 className={styles.sectionHeadText}>Work experience</h2>
-   </motion.div>
+   {/* <motion.div variants={textVariant()}> */}
+   <p className={styles.sectionSubText}>What I have done so far</p>
+   <div className='flex items-center'>
+      <h2 className={styles.sectionHeadText}>Experience<span className='text-[#915eff]'>.</span></h2>
+      <div className='w-full h-[1px] flex bg-[#915eff] ml-5 items-center justify-center'/>
+      {/* <hr className='border-[#915eff]'/> */}
+   </div>
+   {/* </motion.div> */}
    <div className="mt-20 flex flex-col">
-    <VerticalTimeline>
+    <VerticalTimeline animate={false}>
       {experiences.map((experience, index) => (
         <ExperienceCard key={index} experience={experience}/>
       ))}

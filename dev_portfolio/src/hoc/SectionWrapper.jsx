@@ -6,6 +6,8 @@ const SectionWrapper = (Component, idName) =>
     function HOC(){
         return (
             <motion.section 
+            data-section
+            id = {idName}
             variants={staggerContainer()}
             initial='hidden'
             whileInView='show'
@@ -13,7 +15,7 @@ const SectionWrapper = (Component, idName) =>
             className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
             >
                 <span className='hash-span' id={idName}>&nbsp;</span>
-                <Component/>
+                <Component />
             </motion.section>
         )
     }

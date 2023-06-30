@@ -4,8 +4,10 @@ import Navbar from './Navbar';
 import About from './About';
 import Tech from './Tech';
 import Experience from './Experience';
+import ExperienceV2 from './ExperienceV2';
 import Works from './Works';
 import Contact from './Contact';
+import Education from './Education';
 
 export {
   Hero,
@@ -18,5 +20,7 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  ExperienceV2,
+  Education,
 }

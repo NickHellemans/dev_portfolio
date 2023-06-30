@@ -33,6 +33,7 @@ import java from "./tech/java.png";
 import aws from "./tech/aws.png";
 import adobe_xd from "./tech/adobe_xd.png";
 import tailwind from "./tech/tailwind.png";
+import mysql from './tech/mysql.png';
 
 import ap from "./company/ap.png";
 import bebold from "./company/bebold.png";
@@ -90,4 +91,6 @@ export {
   email,
   resume,
   vub,
+  mysql,
+  
 };
