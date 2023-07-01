@@ -1,9 +1,6 @@
-import { BallCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { tools, design_tools, databases, languages, frameworks } from '../constants';
-import { motion } from 'framer-motion';
 import { styles } from '../style'
-import { fadeIn, textVariant } from '../utils/motion'
 import { useState, Suspense } from 'react';
 import { Tab } from '@headlessui/react';
 import { Reveal } from './Reveal';
@@ -21,8 +18,8 @@ const InnerTech = () => {
         {/* <motion.div variants={textVariant()}> */}
         <p className={styles.sectionSubText}>Technologies I have worked with</p>
         <div className='flex items-center'>
-          <h2 className={styles.sectionHeadText}>Skills<span className='text-[#915eff]'>.</span></h2>
-          <div className='w-full h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
+          <h2 className={styles.sectionHeadText}>Skills<span className='text-highlight'>.</span></h2>
+          <div className='w-full h-[1px] flex bg-highlight ml-5 items-center justify-center' />
           {/* <hr className='border-[#915eff]'/> */}
         </div>
       </Reveal>
@@ -107,9 +104,9 @@ const InnerTech = () => {
         {category.map((tech, index) => (
           <div key={tech.name} className='w-24 h-24 flex justify-center items-center'>
             <Suspense fallback={<Spinner />}>
-            <Reveal delay={index * 0.05}>
-              <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
-            </Reveal>
+              <Reveal delay={index * 0.05}>
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+              </Reveal>
             </Suspense>
           </div>
         ))}

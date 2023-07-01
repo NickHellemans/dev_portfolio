@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../style'
-import { fadeIn, textVariant } from '../utils/motion'
+import { fadeIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
 import { resume, services } from '../constants';
 import { ExperienceV2, Education } from '../components';

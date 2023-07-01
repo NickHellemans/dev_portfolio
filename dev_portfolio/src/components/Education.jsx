@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { degrees } from '../constants';
 import { SectionWrapper } from "../hoc";
-import { textVariant } from '../utils/motion';
 import { Reveal } from './Reveal';
 
 const DegreesCard = ({ degree }) => (
@@ -10,7 +8,7 @@ const DegreesCard = ({ degree }) => (
         <div className="flex flex-wrap justify-between mt-5">
             <div className="justify-center">
                 <h3 className="text-white text-[22px] font-bold">{degree.name}</h3>
-                <p className="text-[#915eff] text-[16px] font-semibold" style={{ margin: 0 }}>{degree.school}</p>
+                <p className="text-highlight text-[16px] font-semibold" style={{ margin: 0 }}>{degree.school}</p>
                 <p className='text-secondary font-small text-[14px]'>{degree.minor ? `Minor: ${degree.minor}` : ``}</p>
             </div>
             <div className="flex flex-col sm:items-start md:items-end justify-end items-start">
@@ -33,7 +31,7 @@ const InnerEducation = () => {
                 </div>
                 <div className='flex items-center'>
                     <div className='w-full h-[1px] flex bg-[#915eff] mr-5 items-center justify-center' />
-                    <h2 className={styles.sectionHeadText}>Education<span className='text-[#915eff]'>.</span></h2>
+                    <h2 className={styles.sectionHeadText}>Education<span className='text-highlight'>.</span></h2>
                     {/* <hr className='border-[#915eff]'/> */}
                 </div>
             </Reveal>
@@ -44,7 +42,7 @@ const InnerEducation = () => {
                         <div>
                             {index ?
                                 <>
-                                    <hr key={degree.name} className="mt-5 border-[#915eff]" />
+                                    <hr key={degree.name} className="mt-5 border-highlight" />
                                     <DegreesCard key={index + 1} degree={degree} />
                                 </>
                                 :

@@ -1,12 +1,7 @@
-import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { SectionWrapper } from '../hoc';
-import { fadeIn, textVariant } from '../utils/motion';
-import { socials, resume } from '../constants';
-import { useState, useRef } from 'react';
-import { EarthCanvas } from './canvas';
-import { slideIn } from '../utils/motion';
-import AstronautCanvas from './canvas/Earth';
+import { resume } from '../constants';
+import AstronautCanvas from './canvas/Astronaut';
 import Socials from './Socials';
 import { Reveal } from './Reveal';
 

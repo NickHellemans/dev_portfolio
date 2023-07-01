@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { github } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 import { Reveal } from './Reveal';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
@@ -13,7 +13,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     <>
 
       <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
-      {/* <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'> */}
         <motion.div className='relative w-full h-[230px]' whileHover={{ rotate: 3, scale: 1.1 }}>
           <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
 
@@ -37,8 +36,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
 
         </motion.div>
-      {/* </div> */}
-
     </>
 
   )
@@ -46,24 +43,19 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 const InnerWorks = () => {
   return (
     <>
-      {/* <motion.div variants={textVariant()}> */}
       <Reveal width='100%'>
 
         <p className={styles.sectionSubText}>My work</p>
         <div className='flex items-center'>
-          <h2 className={styles.sectionHeadText}>Projects<span className='text-[#915eff]'>.</span></h2>
-          <div className='w-full h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
-          {/* <hr className='border-[#915eff]'/> */}
+          <h2 className={styles.sectionHeadText}>Projects<span className='text-highlight'>.</span></h2>
+          <div className='w-full h-[1px] flex bg-highlight ml-5 items-center justify-center' />
         </div>
-        {/* </motion.div> */}
 
         <div className='w-full flex'>
-          {/* <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-3 text-secondary text-[17pz] max-w-3xl leading-[30px]'> */}
           <p className='mt-3 text-secondary text-[17pz] max-w-3xl leading-[30px]'>
             Following selection of projects showcase my skills and experience through real-world examples of my work. Each project is briefly described
             with links to the code repositories if possible.
           </p>
-          {/* </motion.p> */}
         </div>
       </Reveal>
 
