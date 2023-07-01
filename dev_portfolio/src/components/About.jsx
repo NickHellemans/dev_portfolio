@@ -38,7 +38,7 @@ const InnerAbout = () => {
       {/* <motion.div  variants={textVariant()}> */}
       <Reveal width='100%'>
         <p className={styles.sectionSubText}>Introduction</p>
-        <div className='flex sm:flex-wrap md:flex-nowrap flex-wrap items-center'>
+        <div className='flex items-center'>
           <h2 className={styles.sectionHeadText}>About<span className='text-[#915eff]'>.</span></h2>
           <div className='w-full h-[0px] sm:h-[0px] md:h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
           <div className='ml-2 flex justify-between items-between gap-2'>
@@ -69,6 +69,7 @@ const InnerAbout = () => {
           ))}
         </div>
       {/* </Reveal> */}
+      <div id='experience_and_education' /> 
       <Reveal width='100%' slide={true}>
 
         {
@@ -82,7 +83,12 @@ const InnerAbout = () => {
           <Tab.Group>
             <Tab.List className="w-3/4 flex space-x-1 rounded-xl bg-tertiary p-1 green-pink-gradient">
               <Tab
-                onClick={() => setToggleExperience(true)}
+                onClick={() => 
+                  {
+                    setToggleExperience(true);
+                    let elmntToView = document.getElementById("experience_and_education");
+                    elmntToView.scrollIntoView();
+                  }}
                 className={({ selected }) =>
                   classNames(
                     'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white ',
@@ -105,7 +111,11 @@ const InnerAbout = () => {
                       : 'hover:bg-pink-300 hover:text-white'
                   )
                 }
-                onClick={() => setToggleExperience(false)}
+                onClick={() => {
+                  setToggleExperience(false);
+                  let elmntToView = document.getElementById("experience_and_education");
+                  elmntToView.scrollIntoView();
+                }}
               >
                 Education
               </Tab>

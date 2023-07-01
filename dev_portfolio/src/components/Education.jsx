@@ -27,7 +27,7 @@ const InnerEducation = () => {
     return (
         <>
             {/* <motion.div variants={textVariant()}> */}
-            <Reveal width='100%'>
+            <Reveal width='100%' delay={0}>
                 <div className='flex justify-end'>
                     <p className={styles.sectionSubText}>What I have studied so far</p>
                 </div>
@@ -40,7 +40,7 @@ const InnerEducation = () => {
             {/* </motion.div> */}
             <div className="mt-1 flex flex-col">
                 {degrees.map((degree, index) => (
-                    <Reveal key={index} width='100%'>
+                    <Reveal key={index} width='100%' delay={0}>
                         <div>
                             {index ?
                                 <>

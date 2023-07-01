@@ -4,8 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  scroll-behaviour:smooth;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 * {

@@ -35,7 +35,7 @@ const InnerExperience = () => {
     return (
         <>
             {/* <motion.div variants={textVariant()}> */}
-            <Reveal width="100%">
+            <Reveal width="100%" delay={0}>
                 <p className={styles.sectionSubText}>What I have done so far</p>
                 <div className='flex items-center'>
                     <h2 className={styles.sectionHeadText}>Experience<span className='text-[#915eff]'>.</span></h2>
@@ -46,7 +46,7 @@ const InnerExperience = () => {
             {/* </motion.div> */}
             <div className="mt-1 flex flex-col">
                 {experiences.map((experience, index) => (
-                    <Reveal key={index} width="100%">
+                    <Reveal key={index} width="100%" delay={0}>
                         <div key={index}>
 
                             {index ? <ExperienceCard key={index} experience={experience} /> : <>

@@ -3,7 +3,7 @@ import {motion, useInView, useAnimation} from 'framer-motion';
 
 
 
-export const Reveal = ({children, width = "fit-content"}) => {
+export const Reveal = ({children, width = "fit-content", delay = 0.25}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true});
 
@@ -26,7 +26,7 @@ export const Reveal = ({children, width = "fit-content"}) => {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{duration: 0.5, delay: 0.25}}
+            transition={{duration: 0.5, delay: delay}}
         >
             {children}
         </motion.div>
