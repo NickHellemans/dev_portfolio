@@ -32,6 +32,7 @@ const Hero = () => {
   }, [])
 
   return (
+
     <section className='relative w-full h-screen mx-auto'>
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className='flex flex-col justify-center items-center mt-5'>
@@ -45,7 +46,7 @@ const Hero = () => {
       </div>
       
       {
-  
+        
         isMobile ? <AstronautCanvas scale={0.3} position={[0, -0.3, 0]}/> : <SpaceshipCanvas />
       }
     
@@ -56,7 +57,7 @@ const Hero = () => {
               animate={{ y: [0, 24, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }}
               className='w-3 h-3 rounded-full bg-secondary mb-1'
-            />
+              />
           </div>
         </a>
       </div>
