@@ -14,8 +14,8 @@ const InnerContact = () => {
   return (
     <>
       <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
-        <Reveal width='full-width'>
-          <div className='flex-[0.75] rounded-2xl h-full p-[1px] green-pink-gradient'>
+        <Reveal width='100%'>
+          <div className='sm:w-full lg:w-1/2 w-full flex-[0.75] rounded-2xl h-full p-[1px] green-pink-gradient'>
             <div className='bg-tertiary rounded-2xl p-8'>
               <p className={styles.sectionSubText}>My socials & resume</p>
               <h2 className={styles.sectionHeadText}>Contact<span className='text-[#915eff]'>.</span></h2>

@@ -16,7 +16,7 @@ const InnerTech = () => {
   return (
     <>
 
-      <Reveal width='full-width'>
+      <Reveal width='100%'>
         {/* <motion.div variants={textVariant()}> */}
         <p className={styles.sectionSubText}>Technologies I have worked with</p>
         <div className='flex items-center'>
@@ -102,7 +102,7 @@ const InnerTech = () => {
         </Tab.Group>
       </Reveal>
       {/* </motion.div> */}
-      <Reveal width='full-width'>
+      <Reveal width='100%'>
         <div className='flex flex-row flex-wrap justify-center gap-1'>
           {category.map((tech) => (
             <div className='w-24 h-24 flex justify-center items-center' key={tech.name}>

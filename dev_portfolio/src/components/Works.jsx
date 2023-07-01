@@ -12,8 +12,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
   return (
     <>
 
-      {/* <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'> */}
-      <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card'>
+      <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
+      {/* <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'> */}
         <motion.div className='relative w-full h-[230px]' whileHover={{ rotate: 3, scale: 1.1 }}>
           <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
 
@@ -33,11 +33,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               </p>
             ))}
           </div>
-          <p className='mt-2 text-secondary text-[14px]'>{description} <span className='text-[#915eff] font-bold text-[16px] hover:underline cursor-pointer'>Learn more &gt;</span></p>
+          <p className='mt-2 text-secondary text-[14px]'>{description} <a href={source_code_link} target='_blank' rel='noreferrer' className='text-[#915eff] font-bold text-[16px] hover:underline cursor-pointer'>Learn more &gt;</a></p>
         </div>
 
-        {/* </motion.div> */}
-      </div>
+        </motion.div>
+      {/* </div> */}
 
     </>
 
@@ -47,7 +47,7 @@ const InnerWorks = () => {
   return (
     <>
       {/* <motion.div variants={textVariant()}> */}
-      <Reveal width='full-width'>
+      <Reveal width='100%'>
 
         <p className={styles.sectionSubText}>My work</p>
         <div className='flex items-center'>
@@ -67,13 +67,13 @@ const InnerWorks = () => {
         </div>
       </Reveal>
 
-      <Reveal width='full-width'>
+      {/* <Reveal width='full-width'> */}
         <div className='mt-20 flex flex-wrap justify-center gap-7'>
           {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
         </div>
-      </Reveal>
+      {/* </Reveal> */}
     </>
   )
 }

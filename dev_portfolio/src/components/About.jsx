@@ -12,15 +12,15 @@ import { Reveal } from './Reveal';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <div className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
+    // <div className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
 
-      {/* <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'> */}
+      <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
       <div options={{ max: 45, scale: 1, speed: 450 }} className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
         <img src={icon} alt={title} className='w-16 h-16 object-contain' />
         <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
       </div>
-      {/* </motion.div> */}
-    </div>
+      </motion.div>
+    // </div> 
 
   )
 }
@@ -36,7 +36,7 @@ const InnerAbout = () => {
   return (
     <>
       {/* <motion.div  variants={textVariant()}> */}
-      <Reveal width='full-width'>
+      <Reveal width='100%'>
         <p className={styles.sectionSubText}>Introduction</p>
         <div className='flex sm:flex-wrap md:flex-nowrap flex-wrap items-center'>
           <h2 className={styles.sectionHeadText}>About<span className='text-[#915eff]'>.</span></h2>
@@ -60,22 +60,23 @@ const InnerAbout = () => {
           </a>
         </div>
       </Reveal>
-      <Reveal width='full-width'>
+  
+      {/* <Reveal width='full-width'> */}
         {/* </motion.p> */}
         <div className='mt-20 flex flex-wrap justify-center gap-10'>
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
-      </Reveal>
-      <Reveal width='full-width'>
+      {/* </Reveal> */}
+      <Reveal width='100%' slide={true}>
 
         {
           toggleExperience ? <ExperienceV2 /> : <Education />
         }
 
       </Reveal>
-      <Reveal width='full-width'>
+      <Reveal width='100%'>
 
         <div className='flex justify-center'>
           <Tab.Group>
