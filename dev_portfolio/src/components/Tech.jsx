@@ -4,9 +4,10 @@ import { tools, design_tools, databases, languages, frameworks } from '../consta
 import { motion } from 'framer-motion';
 import { styles } from '../style'
 import { fadeIn, textVariant } from '../utils/motion'
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { Tab } from '@headlessui/react';
 import { Reveal } from './Reveal';
+import Spinner from './Spinner';
 
 const InnerTech = () => {
   const [category, setCategory] = useState(languages);
@@ -105,11 +106,14 @@ const InnerTech = () => {
       <div className='flex flex-row flex-wrap justify-center gap-1'>
         {category.map((tech, index) => (
           <div key={tech.name} className='w-24 h-24 flex justify-center items-center'>
+            <Suspense fallback={<Spinner />}>
             <Reveal delay={index * 0.05}>
               <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
             </Reveal>
+            </Suspense>
           </div>
         ))}
+
       </div>
 
 

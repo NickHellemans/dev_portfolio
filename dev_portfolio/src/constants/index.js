@@ -34,6 +34,7 @@ import {
   dev_portfolio,
   raytracer,
   compiler,
+  treefarm,
   Linkedin,
   Github,
   Email,
@@ -243,6 +244,7 @@ const experiences = [
       "Research within the field of Novel View Synthesis",
       "Capturing fotorealistic data to create realistic virtual nature scene experiences in a cost efficient way",
       "Researched & documented an optimal camera rig when using Neural Radiance Fields to capture data to create these virtual scenes",
+      "Researched parameters included: baseline, lens type (perspective vs fisheye vs 360), NeRF implementation, static vs dynamic scenes and aligment / positioning of the camera's",
       "Neural Radiance Field development using Nerfstudio framework"
     ],
   },
@@ -255,7 +257,8 @@ const experiences = [
     points: [
     "Developing a data model exporter web application from scratch with React, Node, Express & Firebase",
     "Individual project to provide an end-to-end solution",
-    "Developing a dashboard to display important real-time data in the office with React"
+    "Developing a dashboard to display important real-time data in the office with React",
+    "Intro into the marketing world"
     ],
   },
 ];
@@ -319,6 +322,31 @@ const projects = [
     ],
     image: compiler,
     source_code_link: "https://github.com/NickHellemans/teenytinycompiler",
+  },
+  {
+    name: "MyTreefarm",
+    description:
+      "A project build by myself and other team members as an assigment working agile. This project encompasses an easy to use task sheduler for a tree farm company and it's employees. The project exists out of an angular frontend for the employees, a .NET admin panel and a .NET backend",
+    tags: [
+      {
+        name: "C#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: ".NET",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Angular",
+        color: "green-text-gradient",
+      },
+      {
+        name: "auth0",
+        color: "green-text-gradient",
+      },
+    ],
+    image: treefarm,
+    source_code_link: "https://github.com/NickHellemans/Treefarm.git",
   },
 ];
 

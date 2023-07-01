@@ -39,9 +39,10 @@ const Hero = () => {
           <div className='w-5 h-5 rounded-full bg-[#915eff]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi, I&apos;m <span className='text-[#915eff]'>Nick.</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>A developer interested in systems & web programming, graphics and machine learning</p>
+        <div className='w-3/4'>
+          <h1 className={`${styles.heroHeadText} text-white`}>Hi, I&apos;m <span className='text-highlight'>Nick.</span></h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>A full<span className='text-highlight'>-</span>stack <span className='text-highlight text-[46px]'>developer </span> 
+           experienced in <span className='text-highlight text-[36px]'>software & web development</span> with an interest in graphics & machine learning</p>
         </div>
       </div>
       

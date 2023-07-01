@@ -43,6 +43,7 @@ import vub from "./company/vub.png";
 import dev_portfolio from "./projects/dev_portfolio.png";
 import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
+import treefarm from "./projects/treefarm_dashboard.png"
 
 import {ReactComponent as Linkedin} from "./socials/linkedin.svg";
 import linkedin from "./socials/linkedin.png";
@@ -92,6 +93,7 @@ export {
   dev_portfolio,
   raytracer,
   compiler,
+  treefarm,
   Linkedin,
   linkedin,
   Email,

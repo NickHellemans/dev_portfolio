@@ -3,24 +3,20 @@ import { motion } from 'framer-motion';
 import { styles } from '../style'
 import { fadeIn, textVariant } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
-import { socials, resume, services } from '../constants';
+import { resume, services } from '../constants';
 import { ExperienceV2, Education } from '../components';
-
 import { Tab } from '@headlessui/react'
 import Socials from './Socials';
 import { Reveal } from './Reveal';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    // <div className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
-
       <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
       <div options={{ max: 45, scale: 1, speed: 450 }} className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
         <img src={icon} alt={title} className='w-16 h-16 object-contain' />
         <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
       </div>
       </motion.div>
-    // </div> 
 
   )
 }
@@ -39,8 +35,8 @@ const InnerAbout = () => {
       <Reveal width='100%'>
         <p className={styles.sectionSubText}>Introduction</p>
         <div className='flex items-center'>
-          <h2 className={styles.sectionHeadText}>About<span className='text-[#915eff]'>.</span></h2>
-          <div className='w-full h-[0px] sm:h-[0px] md:h-[1px] flex bg-[#915eff] ml-5 items-center justify-center' />
+          <h2 className={styles.sectionHeadText}>About<span className='text-highlight'>.</span></h2>
+          <div className='w-full h-[0px] sm:h-[0px] md:h-[1px] flex bg-highlight ml-5 items-center justify-center' />
           <div className='ml-2 flex justify-between items-between gap-2'>
             <Socials />
           </div>
@@ -49,9 +45,26 @@ const InnerAbout = () => {
         {/* </motion.div> */}
         {/* <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'> */}
         <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-          I&apos;m a skilled software developer with experience in C, C++, ... . Eager to learn. Check out my projects to see what I have worked on!
+          <span className='border green-pink-gradient pl-2 pr-2 bg-highlight rounded border-highlight text-white
+           text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a skilled and experienced software/web 
+           developer based in Belgium. I specialize in the backend, but I don&apos;t mind getting my hands dirty on some 
+           frontend work too! Besides that I recently started to get an interest in graphics and all the things
+           that come with it. So I&apos;m getting my feet wet with that! Lastely I find machine learning to be
+           a very fascinating subject and I did some work on that aswell.
         </p>
-        <div className='mt-8 mb-1 flex justify-center items-center'>
+        <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+            I&apos;ve got an extensive toolkit to tackle any kind of problem which u can check out in the 
+            <a href='#skills' className='text-highlight hover:underline'> skills</a> section for a detailed overview.
+            However, I am eager to add new weapons to my arsenal if they proof to be the best 
+            tool for the job. 
+        </p>
+        <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+            Recently graduated as a bachelor of applied informatics, I am on the lookout for a new challenge: <span className='text-highlight font-extrabold'>A job! </span>
+            While I am actively searching for a job, I still didn&apos;t get enough of all that studying and 
+            that&apos;s why I will be starting my master degree in applied informatics in september at VUB Brussels 
+            in night school along side the job I will hopefully have by then!
+        </p>
+        <div className='mt-8 mb-1 flex items-center'>
           <a href={resume} download='nick-hellemans_dev-resume' target='_blank' rel='noreferrer' className='w-auto flex justify-center items-center'>
             <button className="bg-gray-300 hover:bg-tertiary text-gray-700 font-bold hover:text-white py-2 px-4 rounded inline-flex justify-center items-center">
               <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
