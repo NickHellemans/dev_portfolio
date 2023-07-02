@@ -29,18 +29,6 @@ const InnerAbout = () => {
 
   const [toggleExperience, setToggleExperience] = useState(true);
 
-  const exp_ref = useRef(null);
-  const edu_ref = useRef(null);
-  const ref = useRef(null);
-
-  const handleScrollIntoView = (ref) => {
-    ref.current?.scrollIntoView(true, { behavior: 'smooth' });
-  };
-
-  const handleScrollIntoViewNoRef = () => {
-    ref.current?.scrollIntoView(true, { behavior: 'smooth' });
-  };
-
   const  scrollToJustAbove = (margin=20) => {
     let elem = document.getElementById("experience_and_education")
     let dims = elem.getBoundingClientRect();
@@ -104,11 +92,11 @@ const InnerAbout = () => {
         ))}
       </div>
       {/* </Reveal> */}
-      <div ref={ref} id='experience_and_education'/>
+      <div id='experience_and_education'/>
       <Reveal width='100%' slide={true}>
 
         {
-          toggleExperience ? <ExperienceV2 ref={exp_ref}/> : <Education ref={edu_ref} />
+          toggleExperience ? <ExperienceV2 /> : <Education />
         }
 
       </Reveal>
@@ -120,10 +108,6 @@ const InnerAbout = () => {
               <Tab
                 onClick={() => {
                   setToggleExperience(true);
-                  // let elmntToView = document.getElementById("experience");
-                  // elmntToView.scrollIntoView(true, { behavior: 'smooth' });
-                  //handleScrollIntoView(exp_ref);
-                  //handleScrollIntoViewNoRef();
                   scrollToJustAbove();
                 }}
                 className={({ selected }) =>
@@ -150,10 +134,6 @@ const InnerAbout = () => {
                 }
                 onClick={() => {
                   setToggleExperience(false);
-                  // let elmntToView = document.getElementById("education");
-                  // elmntToView.scrollIntoView(true, { behavior: 'smooth' });
-                  //handleScrollIntoView(edu_ref);
-                  //handleScrollIntoViewNoRef();
                   scrollToJustAbove();
                 }}
               >
