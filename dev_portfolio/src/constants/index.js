@@ -84,6 +84,32 @@ const services = [
   },
 ];
 
+const interests = [
+  {
+    name: "Computer Graphics",
+  },
+  {
+    name: "Raytracing",
+  },
+  {
+    name: "Game Dev",
+  },
+  {
+    name: "Machine learning",
+  },
+  {
+    name: "AI",
+  },
+  {
+    name: "Computer Vision",
+  },
+  {
+    name: "Martial arts",
+  },
+  {
+    name: "Fitness",
+  },
+]
 const degrees = [
   {
     name: "Graduate programming",
@@ -369,5 +395,5 @@ const socials = [
 ];
 
 
-export { services, degrees, experiences, projects, socials, resume, tools, design_tools, databases, languages, frameworks, Github, Linkedin, Email};
+export { services, interests, degrees, experiences, projects, socials, resume, tools, design_tools, databases, languages, frameworks, Github, Linkedin, Email};
 

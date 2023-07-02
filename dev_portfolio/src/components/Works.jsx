@@ -11,31 +11,38 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
   return (
     <>
+      <div className='shadow-card rounded-2xl h-full'>
+        <Reveal key={`project-${index}`} width='100%' delay={index * 0.25}>
+          <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
 
-      <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
-        <motion.div className='relative w-full h-[230px]' whileHover={{ rotate: 3, scale: 1.1 }}>
-          <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
+            {/* <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'> */}
+            <motion.div className='relative w-full h-[230px]' whileHover={{ rotate: 3, scale: 1.1 }}>
+              <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <motion.div onClick={() => window.open(source_code_link, "_blank")} className='bg-tertiary w-10 h-10 rounded-full flex justify-center items-center cursor-pointer' whileHover={{ scale: 1.5 }}>
-              <img src={github} alt='github' className='w-1/2 h-1/2 object-contain' />
+              <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+                <motion.div onClick={() => window.open(source_code_link, "_blank")} className='bg-tertiary w-10 h-10 rounded-full flex justify-center items-center cursor-pointer' whileHover={{ scale: 1.5 }}>
+
+                  <img src={github} alt='github' className='w-1/2 h-1/2 object-contain' />
+                </motion.div>
+              </div>
             </motion.div>
-          </div>
-        </motion.div>
 
-        <div className='mt-12'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <div className='mt-1 flex flex-wrap gap-2'>
-            {tags.map((tag, index) => (
-              <p key={tag.name} className={`text-[15px] text-[#915eff]`}>
-                {index ? '- ' : ''}{tag.name}
-              </p>
-            ))}
-          </div>
-          <p className='mt-2 text-secondary text-[14px]'>{description} <a href={source_code_link} target='_blank' rel='noreferrer' className='text-[#915eff] font-bold text-[16px] hover:underline cursor-pointer'>Learn more &gt;</a></p>
-        </div>
+            <div className='mt-12'>
+              <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+              <div className='mt-1 flex flex-wrap gap-2'>
+                {tags.map((tag, index) => (
+                  <p key={tag.name} className={`text-[15px] text-[#915eff]`}>
+                    {index ? '- ' : ''}{tag.name}
+                  </p>
+                ))}
+              </div>
+              <p className='mt-2 text-secondary text-[14px]'>{description} <a href={source_code_link} target='_blank' rel='noreferrer' className='text-[#915eff] font-bold text-[16px] hover:underline cursor-pointer'>Learn more &gt;</a></p>
+            </div>
 
-        </motion.div>
+            {/* </motion.div> */}
+          </div>
+        </Reveal>
+      </div>
     </>
 
   )
@@ -59,13 +66,11 @@ const InnerWorks = () => {
         </div>
       </Reveal>
 
-      {/* <Reveal width='full-width'> */}
-        <div className='mt-20 flex flex-wrap justify-center gap-7'>
-          {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
-        </div>
-      {/* </Reveal> */}
+      <div className='mt-20 flex flex-wrap justify-center gap-7'>
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
     </>
   )
 }

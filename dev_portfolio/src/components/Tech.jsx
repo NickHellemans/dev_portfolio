@@ -105,7 +105,7 @@ const InnerTech = () => {
           <div key={tech.name} className='w-24 h-24 flex items-center'>
             <Suspense fallback={<Spinner />}>
               <Reveal delay={index * 0.05}>
-                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
+                <img src={tech.icon} alt='github' className='w-1/2 h-1/2 object-contain' />
               </Reveal>
             </Suspense>
           </div>
