@@ -32,7 +32,7 @@ const InnerContact = () => {
         </Reveal>
     
           {/* <motion.div variants={slideIn("right", "tween", 0.2, 7)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[400px]'> */}
-          <div className='xl:flex-1 xl:h-auto md:h-[550px] h-[400px]'>
+          <div className='xl:flex-1 xl:h-auto md:h-[550px] h-[200px]'>
 
             <AstronautCanvas />
             {/* </motion.div> */}

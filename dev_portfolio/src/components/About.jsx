@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef } from 'react';
 import { styles } from '../style'
-import { fadeIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc';
 import { resume, services } from '../constants';
 import { ExperienceV2, Education } from '../components';
@@ -30,6 +28,12 @@ const ServiceCard = ({ index, title, icon }) => {
 const InnerAbout = () => {
 
   const [toggleExperience, setToggleExperience] = useState(true);
+
+  const ref = useRef(null);
+  const handleScrollIntoView = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
@@ -87,7 +91,7 @@ const InnerAbout = () => {
         ))}
       </div>
       {/* </Reveal> */}
-      <div id='experience_and_education' />
+      <div ref={ref} id='experience_and_education' />
       <Reveal width='100%' slide={true}>
 
         {
@@ -103,8 +107,9 @@ const InnerAbout = () => {
               <Tab
                 onClick={() => {
                   setToggleExperience(true);
-                  let elmntToView = document.getElementById("experience_and_education");
-                  elmntToView.scrollIntoView();
+                  // let elmntToView = document.getElementById("experience_and_education");
+                  // elmntToView.scrollIntoView({ behavior: 'smooth' });
+                  handleScrollIntoView();
                 }}
                 className={({ selected }) =>
                   classNames(
@@ -130,8 +135,9 @@ const InnerAbout = () => {
                 }
                 onClick={() => {
                   setToggleExperience(false);
-                  let elmntToView = document.getElementById("experience_and_education");
-                  elmntToView.scrollIntoView();
+                  // let elmntToView = document.getElementById("experience_and_education");
+                  // elmntToView.scrollIntoView({ behavior: 'smooth' });
+                  handleScrollIntoView();
                 }}
               >
                 Education
