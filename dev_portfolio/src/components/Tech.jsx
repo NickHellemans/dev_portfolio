@@ -100,9 +100,9 @@ const InnerTech = () => {
         </Tab.Group>
       </Reveal>
       {/* </motion.div> */}
-      <div className='flex flex-row flex-wrap justify-center gap-1'>
+      <div className='ml-6 flex flex-wrap justify-center w-full gap-1'>
         {category.map((tech, index) => (
-          <div key={tech.name} className='w-24 h-24 flex justify-center items-center'>
+          <div key={tech.name} className='w-24 h-24 flex items-center'>
             <Suspense fallback={<Spinner />}>
               <Reveal delay={index * 0.05}>
                 <img src={tech.icon} alt='github' className='w-1/2 h-1/2 hover:w-full hover:h-full object-contain' />
