@@ -42,7 +42,7 @@ export default function AstronautCanvas({position = [1, 1.1, -0.5], scale = 0.2}
           <object3D position={[-0.6, 2, 0]} ref={spaceman} />
         </Spaceman>
       </Float>
-      <OrbitControls makeDefault enableZoom={false} />
+      {/* <OrbitControls makeDefault enableZoom={false} /> */}
     </Suspense>
     <Preload all />
     </Canvas>

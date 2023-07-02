@@ -11,12 +11,17 @@ import { Reveal } from './Reveal';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-      <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className='xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
-      <div options={{ max: 45, scale: 1, speed: 450 }} className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-        <img src={icon} alt={title} className='w-16 h-16 object-contain' />
-        <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-      </div>
-      </motion.div>
+
+    <div className='xs:w-[250px] w-full shadow-card rounded-[20px]'>
+      <Reveal width='100%' delay={index * 0.25}>
+        <div className='green-pink-gradient p-[1px] rounded-[20px]'>
+          <div options={{ max: 45, scale: 1, speed: 450 }} className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+            <img src={icon} alt={title} className='w-16 h-16 object-contain' />
+            <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
+          </div>
+        </div>
+      </Reveal>
+    </div>
 
   )
 }
@@ -46,23 +51,23 @@ const InnerAbout = () => {
         {/* <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'> */}
         <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           <span className='border green-pink-gradient pl-2 pr-2 bg-highlight rounded border-highlight text-white
-           text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a skilled and experienced software/web 
-           developer based in Belgium. I specialize in the backend, but I don&apos;t mind getting my hands dirty on some 
-           frontend work too! Besides that I recently started to get an interest in graphics and all the things
-           that come with it. So I&apos;m getting my feet wet with that! Lastely I find machine learning to be
-           a very fascinating subject and I did some work on that aswell.
+           text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a software & web
+          developer based in Belgium. I specialize in the backend, but I don&apos;t mind getting my hands dirty on some
+          frontend work too! I recently fell into the rabbit hole of graphics and all the things
+          that come with it. So I&apos;m getting my feet wet with that! I&apos;m also educated on the subject of 
+          machine learning.
         </p>
         <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-            I&apos;ve got an extensive toolkit to tackle any kind of problem which u can check out in the 
-            <a href='#skills' className='text-highlight hover:underline'> skills</a> section for a detailed overview.
-            However, I am eager to add new weapons to my arsenal if they proof to be the best 
-            tool for the job. 
+          I&apos;ve got an extensive toolkit to tackle any kind of problem which u can check out in the
+          <a href='#skills' className='text-highlight hover:underline'> skills</a> section.
+          However, I am always eager to add new weapons to my arsenal if they proof to be the best
+          tool for the job.
         </p>
         <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-            Recently graduated as a bachelor of applied informatics, I am on the lookout for a new challenge: <span className='text-highlight font-extrabold'>A job! </span>
-            While I am actively searching for a job, I still didn&apos;t get enough of all that studying and 
-            that&apos;s why I will be starting my master degree in applied informatics in september at VUB Brussels 
-            in night school along side the job I will hopefully have by then!
+          Recently graduated as a bachelor in applied informatics, I am on the lookout for a new challenge: <span className='text-highlight font-extrabold'>A job! </span>
+          While I am actively searching for a job, I still want to expand my knowledge in the field of computer science and
+          that&apos;s why I will be starting my master&apos;s degree in applied informatics this fall
+          in night school along side the job I will hopefully have by then!
         </p>
         <div className='mt-8 mb-1 flex items-center'>
           <a href={resume} download='nick-hellemans_dev-resume' target='_blank' rel='noreferrer' className='w-auto flex justify-center items-center'>
@@ -73,16 +78,16 @@ const InnerAbout = () => {
           </a>
         </div>
       </Reveal>
-  
+
       {/* <Reveal width='full-width'> */}
-        {/* </motion.p> */}
-        <div className='mt-20 flex flex-wrap justify-center gap-10'>
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
-          ))}
-        </div>
+      {/* </motion.p> */}
+      <div className='mt-20 flex flex-wrap justify-center gap-10'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
       {/* </Reveal> */}
-      <div id='experience_and_education' /> 
+      <div id='experience_and_education' />
       <Reveal width='100%' slide={true}>
 
         {
@@ -96,12 +101,11 @@ const InnerAbout = () => {
           <Tab.Group>
             <Tab.List className="w-3/4 flex space-x-1 rounded-xl bg-tertiary p-1 green-pink-gradient">
               <Tab
-                onClick={() => 
-                  {
-                    setToggleExperience(true);
-                    let elmntToView = document.getElementById("experience_and_education");
-                    elmntToView.scrollIntoView();
-                  }}
+                onClick={() => {
+                  setToggleExperience(true);
+                  let elmntToView = document.getElementById("experience_and_education");
+                  elmntToView.scrollIntoView();
+                }}
                 className={({ selected }) =>
                   classNames(
                     'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white ',
