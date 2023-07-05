@@ -19,35 +19,27 @@ const Navbar = () => {
     return check;
   };
 
+  
+  const handleScroll = () => {
+    const pageYOffset = window.scrollY;
+
+    let min = Number.MAX_SAFE_INTEGER
+
+    sections.current.forEach((section) => {
+      const sectionOffsetTop = section.offsetTop;
+
+      let diff = pageYOffset - sectionOffsetTop;
+
+      if (section.id != "" && Math.abs(diff) <= min) {
+        min = diff
+        setActiveSection(section.id);
+      }
+    });
+
+  };
+
   useEffect(() => {
 
-    const handleScroll = () => {
-      const pageYOffset = window.scrollY;
-
-      if (isMobile) {
-        if (pageYOffset >= 6200) {
-          setActiveSection("contact")
-          return;
-        }
-      }
-      if (pageYOffset >= 3133) {
-        setActiveSection("contact")
-        return;
-      }
-      let min = Number.MAX_SAFE_INTEGER
-
-      sections.current.forEach((section) => {
-        const sectionOffsetTop = section.offsetTop;
-
-        let diff = pageYOffset - sectionOffsetTop;
-
-        if (section.id != "" && Math.abs(diff) <= min) {
-          min = diff
-          setActiveSection(section.id);
-        }
-      });
-
-    };
     sections.current = document.querySelectorAll('[data-section]');
     window.addEventListener('scroll', handleScroll);
     handleScroll();
@@ -56,7 +48,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isMobile]);
+  }, []);
 
 
   return (

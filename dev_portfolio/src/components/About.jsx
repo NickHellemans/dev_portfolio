@@ -120,55 +120,56 @@ const InnerAbout = () => {
       {/* </Reveal> */}
       <div id='experience_and_education' />
       <Reveal width='100%'>
+
+<div className='mt-20 flex justify-center'>
+  <Tab.Group>
+    <Tab.List className="w-3/4 flex space-x-1 rounded-xl bg-tertiary p-1 green-pink-gradient">
+      <Tab
+        onClick={() => {
+          setToggleExperience(true);
+          scrollToJustAbove();
+        }}
+        className={({ selected }) =>
+          classNames(
+            'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white ',
+            'focus:outline-none focus:ring-2',
+            selected
+              ? 'bg-tertiary shadow'
+              : 'hover:bg-pink-300 hover:text-white'
+          )
+        }
+      >
+        Experience
+      </Tab>
+      <Tab
+        className={({ selected }) =>
+          classNames(
+            'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white',
+            'focus:outline-none focus:ring-2',
+            selected
+              ? 'bg-tertiary shadow'
+              : 'hover:bg-pink-300 hover:text-white'
+          )
+        }
+        onClick={() => {
+          setToggleExperience(false);
+          scrollToJustAbove();
+        }}
+      >
+        Education
+      </Tab>
+
+    </Tab.List>
+  </Tab.Group>
+</div>
+</Reveal>
+      <Reveal width='100%'>
         {
           toggleExperience ? <ExperienceV2 /> : <Education />
         }
 
       </Reveal>
-      <Reveal width='100%'>
 
-        <div className='flex justify-center'>
-          <Tab.Group>
-            <Tab.List className="w-3/4 flex space-x-1 rounded-xl bg-tertiary p-1 green-pink-gradient">
-              <Tab
-                onClick={() => {
-                  setToggleExperience(true);
-                  scrollToJustAbove();
-                }}
-                className={({ selected }) =>
-                  classNames(
-                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white ',
-                    'focus:outline-none focus:ring-2',
-                    selected
-                      ? 'bg-tertiary shadow'
-                      : 'hover:bg-pink-300 hover:text-white'
-                  )
-                }
-              >
-                Experience
-              </Tab>
-              <Tab
-                className={({ selected }) =>
-                  classNames(
-                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white',
-                    'focus:outline-none focus:ring-2',
-                    selected
-                      ? 'bg-tertiary shadow'
-                      : 'hover:bg-pink-300 hover:text-white'
-                  )
-                }
-                onClick={() => {
-                  setToggleExperience(false);
-                  scrollToJustAbove();
-                }}
-              >
-                Education
-              </Tab>
-
-            </Tab.List>
-          </Tab.Group>
-        </div>
-      </Reveal>
 
     </>
   )
