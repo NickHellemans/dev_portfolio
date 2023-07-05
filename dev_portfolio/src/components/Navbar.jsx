@@ -4,6 +4,7 @@ import { styles } from '../style';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets'
 import { Reveal } from './Reveal';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -80,19 +81,27 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img src={toggle ? close : menu} alt='menu' className='w-[28px] h-[28px] object-contain cursor-pointer' onClick={() => setToggle(!toggle)} />
-          <div className={`${toggle ? 'flex' : 'hidden'} green-pink-gradient p-[1px] absolute top-16 right-0 mx-2 my-2 min-w-[140px] z-10 rounded-xl`}>
+          <img src={toggle ? menu : close} alt='menu' className='w-[28px] h-[28px] object-contain cursor-pointer' onClick={() => setToggle(!toggle)} />
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: 125 },
+              visible: { opacity: 1, x: "-10%" }
+            }}
+            initial="hidden"
+            animate={toggle ? "hidden" : "visible"}
+            transition={{ duration: 0.5 }}
+            className={`${toggle ? 'flex' : 'hidden'} green-pink-gradient p-[1px] absolute top-16 right-0 mx-2 my-2 min-w-[140px] z-10 rounded-xl`}>
             <div className='bg-tertiary rounded-xl w-full flex justify-center p-6'>
               <ul className='list-none flex justify-end items-start flex-col gap-4'>
                 {navLinks.map((link) => (
                   <li key={link.id} className={`${activeSection === link.id ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer 
                 text-[16px]`}>
-                    <a href={`#${link.id}`} onClick={() => {setToggle(!toggle)}}>{link.title}</a>
+                    <a href={`#${link.id}`} onClick={() => { setToggle(!toggle) }}>{link.title}</a>
                   </li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </nav>
