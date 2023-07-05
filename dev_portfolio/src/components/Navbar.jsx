@@ -18,7 +18,7 @@ const Navbar = () => {
     return check;
   };
 
-  
+
   // const handleScroll = () => {
   //   const pageYOffset = window.scrollY;
   //   let min = Number.MAX_SAFE_INTEGER
@@ -31,24 +31,32 @@ const Navbar = () => {
   //     }
   //   });
   // };
-  
+
+
   const handleScroll = () => {
     const top = window.scrollY;
-  
+    const heroHeight = sections.current[0].offsetHeight;
+    const projectsHeight = sections.current[4].offsetHeight;
+    const projectOffset = sections.current[4].offsetTop;
+    
     sections.current.forEach((section) => {
       const height = section.offsetHeight;
       const offset = section.offsetTop - 200;
-      if(offset <= 0) return
+      if (top <= heroHeight - 100) {
+        setActiveSection(null)
+        return;
+      }
+      if (top >= projectOffset + projectsHeight - 500) {
+        setActiveSection("contact")
+        return;
+      }
       if (section.id != "" && top >= offset && top < offset + height) {
-        console.log(section)
-        console.log("height: ", height)
-        console.log("top: ", top)
-        console.log("offset: ", offset)
+        console.log("here")
         setActiveSection(section.id);
       }
 
     });
-    
+
   };
   useEffect(() => {
 
