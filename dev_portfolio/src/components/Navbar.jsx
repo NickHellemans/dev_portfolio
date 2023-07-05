@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { styles } from '../style';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets'
-import { Reveal } from './Reveal';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -20,31 +19,37 @@ const Navbar = () => {
   };
 
   
+  // const handleScroll = () => {
+  //   const pageYOffset = window.scrollY;
+  //   let min = Number.MAX_SAFE_INTEGER
+  //   sections.current.forEach((section) => {
+  //     const sectionOffsetTop = section.offsetTop;
+  //     let diff = pageYOffset - sectionOffsetTop;
+  //     if (section.id != "" && Math.abs(diff) <= min) {
+  //       min = diff
+  //       setActiveSection(section.id);
+  //     }
+  //   });
+  // };
+  
   const handleScroll = () => {
     const pageYOffset = window.scrollY;
-
-    let min = Number.MAX_SAFE_INTEGER
-
+  
     sections.current.forEach((section) => {
-      const sectionOffsetTop = section.offsetTop;
-
-      let diff = pageYOffset - sectionOffsetTop;
-
-      if (section.id != "" && Math.abs(diff) <= min) {
-        min = diff
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 200;
+      
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
         setActiveSection(section.id);
       }
     });
-
   };
-
   useEffect(() => {
 
     sections.current = document.querySelectorAll('[data-section]');
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     setIsMobile(isMobileCheck());
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -54,7 +59,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link to="/dev_portfolio/" className='flex items-center gap-2' onClick={() => {
+        <Link to="/" className='flex items-center gap-2' onClick={() => {
           window.scrollTo(0, 0);
         }}>
           <img src={logo} alt="logo" className='w-12 h-12 object-contain' />
