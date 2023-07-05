@@ -7,7 +7,7 @@ import { Reveal } from './Reveal';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   const [activeSection, setActiveSection] = useState(null);
