@@ -33,16 +33,22 @@ const Navbar = () => {
   // };
   
   const handleScroll = () => {
-    const pageYOffset = window.scrollY;
+    const top = window.scrollY;
   
     sections.current.forEach((section) => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 200;
-      
-      if (pageYOffset >= sectionTop && sectionTop < pageYOffset + sectionHeight) {
+      const height = section.offsetHeight;
+      const offset = section.offsetTop - 200;
+      if(offset <= 0) return
+      if (section.id != "" && top >= offset && top < offset + height) {
+        console.log(section)
+        console.log("height: ", height)
+        console.log("top: ", top)
+        console.log("offset: ", offset)
         setActiveSection(section.id);
       }
+
     });
+    
   };
   useEffect(() => {
 
