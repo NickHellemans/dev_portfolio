@@ -43,6 +43,10 @@ svg:hover {
   fill: #915eff;
 }
 
+ul.rocket {
+  list-style: "\1F680";
+}
+
 #download_resume:hover {
   fill: white;
 }
