@@ -68,7 +68,7 @@ const InnerAbout = () => {
               things that come with it. So I&apos;m getting my feet wet with that! 
             </p>
             <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-              I&apos;ve got an extensive toolkit to tackle any kind of problem with, which u can check out in the
+              I&apos;ve got an extensive toolkit to tackle any kind of problem with, which you can check out in the
               <a href='#skills' className='text-highlight hover:underline'> skills</a> section.
               However, I am always eager to add new weapons to my arsenal if they prove to be the best
               tool for the job.

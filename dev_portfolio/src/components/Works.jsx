@@ -73,7 +73,7 @@ const InnerWorks = () => {
         <div className='w-full flex'>
           <p className='mt-3 text-secondary text-[17pz] max-w-3xl leading-[30px]'>
             Following selection of projects showcase my skills and experience through real-world examples of my work. Each project is briefly described
-            with links to the code repositories if possible.
+            with links to the code repositories if possible. Clicking on a project will give you more details about the project and the things I have learned.
           </p>
         </div>
       </Reveal>
