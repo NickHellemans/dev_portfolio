@@ -44,6 +44,12 @@ import {
   github,
   email,
   linkedin,
+  jira,
+  trello,
+  numpy,
+  pandas,
+  tensorflow,
+  scikit,
 } from "../assets";
 
 export const navLinks = [
@@ -75,12 +81,12 @@ const services = [
     icon: backend,
   },
   {
-    title: "Graphics Enthousiast",
-    icon: graphics,
-  },
-  {
     title: "AI Specialist",
     icon: ai,
+  },
+  {
+    title: "Graphics Enthousiast",
+    icon: graphics,
   },
 ];
 
@@ -101,6 +107,9 @@ const interests = [
     name: "AI",
   },
   {
+    name: "Big Data"
+  },
+  {
     name: "Computer Vision",
   },
   {
@@ -110,6 +119,7 @@ const interests = [
     name: "Fitness",
   },
 ];
+
 const degrees = [
   {
     name: "Graduate programming",
@@ -141,34 +151,42 @@ const languages = [
   {
     name: "HTML 5",
     icon: html,
+    skill: 95,
   },
   {
     name: "CSS 3",
     icon: css,
+    skill: 75,
   },
   {
     name: "JavaScript",
-    icon: javascript,
+    icon: javascript,    
+    skill: 95,
   },
   {
     name: "C",
     icon: c,
+    skill: 60,
   },
   {
     name: "C++",
     icon: cpp,
+    skill: 85,
   },
   {
     name: "C#",
     icon: csharp,
+    skill: 95,
   },
   {
     name: "Python",
     icon: python,
+    skill: 90,
   },
   {
     name: "Java",
     icon: java,
+    skill: 70,
   },
 ];
 
@@ -176,6 +194,7 @@ const frameworks = [
   {
     name: ".NET",
     icon: dotnet,
+    skill: 90,
   },
   // {
   //   name: "Enity Framework",
@@ -184,89 +203,147 @@ const frameworks = [
   {
     name: "React JS",
     icon: reactjs,
+    skill: 90,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    skill: 80,
   },
   {
     name: "Three JS",
     icon: threejs,
+    skill: 50,
   },
   {
     name: "OpenGL",
     icon: opengl,
+    skill: 50,
   },
   {
-    name: "glm",
+    name: "Glm",
     icon: glm,
+    skill: 50,
   },
   {
     name: "Node JS",
     icon: nodejs,
+    skill: 80,
   },
+
+];
+
+const ai_tools = [
   {
     name: "Nerfstudio",
     icon: nerfstudio,
+    skill: 80,
   },
-];
-
+  {
+    name: "Tensorflow",
+    icon: tensorflow,
+    skill: 60,
+  },
+  {
+    name: "Numpy",
+    icon: numpy,
+    skill: 70,
+  },
+  {
+    name: "Pandas",
+    icon: pandas,
+    skill: 80,
+  },
+  {
+    name: "Scikit",
+    icon: scikit,
+    skill: 50,
+  },
+]
 const databases = [
   {
     name: "MySQL",
     icon: mysql,
+    skill: 80,
   },
   {
     name: "SQL",
     icon: sql,
+    skill: 85,
   },
   {
     name: "Firebase",
     icon: firebase,
+    skill: 75,
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    skill: 60,
   },
 ];
 const tools = [
   {
-    name: "git",
+    name: "Git",
     icon: git,
+    skill: 80,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
+    skill: 75,
   },
   {
     name: "Unity",
     icon: unity,
+    skill: 60,
   },
   {
     name: "AWS",
     icon: aws,
+    skill: 50,
+  },
+];
+
+const tracking_tools = [
+  {
+    name: "Jira",
+    icon: jira,
+    skill: 60,
+  },
+  {
+    name: "Trello",
+    icon: trello,
+    skill: 60,
+  },
+  {
+    name: "Github issues",
+    icon: github,
+    skill: 75,
   },
 ];
 const design_tools = [
   {
     name: "Adobe XD",
     icon: adobe_xd,
+    skill: 60,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
+    skill: 55,
   },
 ];
 
 const experiences = [
   {
-    title: "Research intern",
+    title: "AI-research intern",
     company_name: "AP Hogeschool - Immersive lab",
     icon: ap,
     iconBg: "#ffff",
     date: "Feb 2023 - May 2023",
     points: [
-      "Research within the field of Novel View Synthesis",
+      "Research within the field of AI-driven Novel View Synthesis",
       "Capturing fotorealistic data to create realistic virtual nature scene experiences in a cost efficient way",
       "Researched & documented an optimal camera rig when using Neural Radiance Fields to capture data to create these virtual scenes",
       "Researched parameters included: baseline, lens type (perspective vs fisheye vs 360), NeRF implementation, static vs dynamic scenes and aligment / positioning of the camera's",
@@ -456,9 +533,11 @@ export {
   socials,
   resume,
   tools,
+  tracking_tools,
   design_tools,
   databases,
   languages,
+  ai_tools,
   frameworks,
   Github,
   Linkedin,

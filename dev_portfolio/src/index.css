@@ -55,6 +55,11 @@ ul.rocket {
   width: 48px;
   height: 48px;
 }
+.progress {
+  background-color: #151030;
+  transition: 1s ease;
+  transition-delay: 0.2s;
+}
 
 @keyframes spin {
   0% {

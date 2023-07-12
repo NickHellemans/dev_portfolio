@@ -62,9 +62,10 @@ const InnerAbout = () => {
               <span className='border green-pink-gradient pl-2 pr-2 bg-highlight rounded border-highlight text-white
            text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a software & web
               developer based in Belgium. I specialize in the backend, but I don&apos;t mind getting my hands dirty on some
-              frontend work too! I recently fell into the rabbit hole of graphics and all the things
-              that come with it. So I&apos;m getting my feet wet with that! I&apos;m also educated on the subject of
-              machine learning.
+              frontend work too! I&apos;m educated in the subject of
+              machine learning combined with practical experience in several projects, mostly focusing on research in the fields of 
+              generative ai, artistic style transfer & computer vision. I recently fell into the rabbit hole of graphics and all the 
+              things that come with it. So I&apos;m getting my feet wet with that! 
             </p>
             <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
               I&apos;ve got an extensive toolkit to tackle any kind of problem with, which u can check out in the

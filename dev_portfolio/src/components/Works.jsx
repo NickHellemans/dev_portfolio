@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             <motion.div onClick={() => {
               setOpenProject({ name, description, tags, image, source_code_link, detailedDescription, thingsLearned });
               openModal();
-            }} className='relative w-full h-[230px]' whileHover={{ rotate: 3, scale: 1.1 }}>
+            }} className='relative w-full h-[230px] cursor-pointer' whileHover={{ rotate: 3, scale: 1.1 }}>
               <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
 
               <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>

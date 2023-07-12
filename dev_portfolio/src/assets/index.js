@@ -35,6 +35,12 @@ import aws from "./tech/aws.png";
 import adobe_xd from "./tech/adobe_xd.png";
 import tailwind from "./tech/tailwind.png";
 import mysql from './tech/mysql.png';
+import jira from './tech/jira.png';
+import trello from './tech/trello.png';
+import numpy from './tech/numpy.png';
+import pandas from './tech/pandas.png';
+import tensorflow from './tech/tensorflow.png';
+import scikit from './tech/scikit.png';
 
 import ap from "./company/ap.png";
 import bebold from "./company/bebold.png";
@@ -101,4 +107,10 @@ export {
   resume,
   vub,
   mysql,
+  jira,
+  trello,
+  numpy,
+  pandas,
+  tensorflow,
+  scikit
 };
