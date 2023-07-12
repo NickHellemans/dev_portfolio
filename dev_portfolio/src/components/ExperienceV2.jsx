@@ -44,10 +44,13 @@ const InnerExperience = () => {
                 {experiences.map((experience, index) => (
                     <Reveal key={index} width="100%" delay={0}>
                         <div key={index}>
-
-                            {index ? <ExperienceCard key={index} experience={experience} /> : <>
-                                <ExperienceCard key={index + 1} experience={experience} />
+                            {index ? 
+                            <>
                                 <hr key={index} className="mt-5 border-highlight" />
+                                <ExperienceCard key={index + 1} experience={experience} /> 
+                            </> : 
+                            <>
+                                <ExperienceCard key={index + 1} experience={experience} />
                             </>
                             }
                         </div>

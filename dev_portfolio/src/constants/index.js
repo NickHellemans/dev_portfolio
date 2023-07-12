@@ -351,6 +351,19 @@ const experiences = [
     ],
   },
   {
+    title: "Generative AI & artistic style transfer for 360⁰ data",
+    company_name: "AP Hogeschool",
+    icon: ap,
+    iconBg: "#ffff",
+    date: "Sep 2022 - Jan 2023",
+    points: [
+      "Research within the field of generative AI & artistic style transfer with a team of researchers",
+      "Researched different ways to eliminate artefacts generated when using style transfer algorithms on 360⁰ videos/images",
+      "Artefacts consists of: stitching lines & convergence at top/bottom. These artefacts produce discontinuities in the result images/videos",
+      "Found new and multiple ways to improve results and generate lesser artefacts or bypass the problem entirely",
+    ],
+  },
+  {
     title: "Software developer intern",
     company_name: "Be Bold",
     icon: bebold,
