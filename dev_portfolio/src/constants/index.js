@@ -32,6 +32,7 @@ import {
   nerfstudio,
   adobe_xd,
   dev_portfolio,
+  monkeypreter,
   raytracer,
   compiler,
   treefarm,
@@ -379,6 +380,41 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "Monkeypreter",
+    description:
+      "C implementation of the Monkey programming language (from \"Writing An Interpreter In Go\" by Thorsten Ball) as a tree-walking interpreter that comes with it's own mark & sweep garbage collector to take the trash out.",
+    detailedDescription: [
+      "This project is the result of going through the amazing book `Writing An Interpreter In Go` by Thorsten Ball, but using a different implementation language to challenge myself to truely understand what's going on. Following the book I implemented the Monkey programming language as a tree-walking interpreter in C. The interpreter also comes with it's own mark & sweep garbage collector to take the trash out.",
+      "The source code is also accompanied by an extensive test project using Google's test framework 'GoogleTest' to make sure every feature is properly implemented and works for every edge case.",
+      "Features include: variable bindings, integers, booleans, arithmetic expressions, built-in functions (len, first, last, cdr, push & print), first-class and higher-order functions, closures, a string data structure & an array data structure."
+ ],
+    thingsLearned: [
+      "Deeper understanding of programming languages as a whole",
+      "Capabilities of programming languages",
+      "Everything involved in the compiler process",
+      "Lexical analysis",
+      "Parsing source code into a Abstract Syntax Tree (AST)",
+      "Evaluating a AST",
+      "Writing useful tests"
+    ],
+    tags: [
+      {
+        name: "C",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "C++",
+        color: "green-text-gradient",
+      },
+      {
+        name: "GoogleTest",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: monkeypreter,
+    source_code_link: "https://github.com/NickHellemans/monkeypreter",
+  },
   {
     name: "Development portfolio",
     description:

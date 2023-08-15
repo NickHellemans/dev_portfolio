@@ -50,6 +50,7 @@ import dev_portfolio from "./projects/dev_portfolio.png";
 import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
 import treefarm from "./projects/treefarm_dashboard.png"
+import monkeypreter from "./projects/monkeypreter.png"
 
 import {ReactComponent as Linkedin} from "./socials/linkedin.svg";
 import linkedin from "./socials/linkedin.png";
@@ -96,6 +97,7 @@ export {
   aws,
   adobe_xd,
   tailwind,
+  monkeypreter,
   dev_portfolio,
   raytracer,
   compiler,
