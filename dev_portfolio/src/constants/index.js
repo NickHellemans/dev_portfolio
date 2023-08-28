@@ -33,6 +33,7 @@ import {
   adobe_xd,
   dev_portfolio,
   monkeypreter,
+  loxpiler,
   raytracer,
   compiler,
   treefarm,
@@ -380,6 +381,34 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "Loxpiler",
+    description:
+      "C implementation of the Lox programming language (from \"Crafting Interpreters\" by Robert Nystrom) as a bytecode VM that comes with it's own mark & sweep garbage collector to take the trash out.",
+    detailedDescription: [
+      "This project is the result of going through the amazing book `Crafting Interpreters` by Robert Nystrom. Following the book I implemented the Lox programming language as a bytecode VM in C. The VM also comes with it's own mark & sweep garbage collector to take the trash out.",
+      "This project put the focus on speed and performance, after writing a tree-walking interpreter it was time for someting faster and more up-to-date with the current implementations of programming languages.",
+      "Features include: dynamic typing, automatic memory management, datatypes (booleans, numbers and strings), expressions (arithmetic, comparison and equality), variable binding, control flow (if, for and while), functions, closures, classes & inheritance"
+ ],
+    thingsLearned: [
+      "Deeper understanding of programming languages as a whole",
+      "How OOP languages are implemented",
+      "Capabilities of programming languages",
+      "Everything involved in the compiler process",
+      "Lexical analysis",
+      "Parsing and compiling source code into a bytecode representation",
+      "Running the bytecode representation of the source code in a stack-based VM",
+      "How to optimize performance",
+    ],
+    tags: [
+      {
+        name: "C",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: loxpiler,
+    source_code_link: "https://github.com/NickHellemans/loxpiler",
+  },
   {
     name: "Monkeypreter",
     description:

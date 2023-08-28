@@ -51,6 +51,7 @@ import raytracer from "./projects/raytracer.png";
 import compiler from "./projects/compiler.png";
 import treefarm from "./projects/treefarm_dashboard.png"
 import monkeypreter from "./projects/monkeypreter.png"
+import loxpiler from "./projects/loxpiler.png"
 
 import {ReactComponent as Linkedin} from "./socials/linkedin.svg";
 import linkedin from "./socials/linkedin.png";
@@ -98,6 +99,7 @@ export {
   adobe_xd,
   tailwind,
   monkeypreter,
+  loxpiler,
   dev_portfolio,
   raytracer,
   compiler,
