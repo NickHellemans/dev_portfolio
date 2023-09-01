@@ -40,7 +40,7 @@ const Hero = () => {
         <div className='w-3/4'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I&apos;m <span className='text-highlight'>Nick.</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>A full<span className='text-highlight'>-</span>stack <span className='text-highlight text-[36px]'>developer </span> 
-           with an interest in graphics & machine learning</p>
+           with an affinity for graphics & machine learning</p>
         </div>
       </div>
       

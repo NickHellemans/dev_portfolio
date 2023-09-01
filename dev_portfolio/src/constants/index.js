@@ -339,6 +339,16 @@ const design_tools = [
 
 const experiences = [
   {
+    title: "R&D Engineer",
+    company_name: "SEAFAR",
+    icon: ap,
+    iconBg: "#ffff",
+    date: "Sep 2023 - present",
+    points: [
+      "Research and development within the field of remote navigation and autonomous shipping",
+    ],
+  },
+  {
     title: "AI-research intern",
     company_name: "AP Hogeschool - Immersive lab",
     icon: ap,

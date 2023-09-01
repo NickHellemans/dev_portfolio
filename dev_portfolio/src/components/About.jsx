@@ -60,12 +60,11 @@ const InnerAbout = () => {
             {/* <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'> */}
             <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
               <span className='border green-pink-gradient pl-2 pr-2 bg-highlight rounded border-highlight text-white
-           text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a software & web
-              developer based in Belgium. I specialize in the backend, but I don&apos;t mind getting my hands dirty on some
+           text-[18px] font-extrabold'>H</span> ey! I&apos;m Nick, a full-stack software & web
+              developer, currently working as a R&D engineer at <a href='https://seafar.eu/nl/' target='blank' className='text-highlight hover:underline'>SEAFAR</a> . I specialize in the backend with a focus on performance and scalability, but I don&apos;t mind getting my hands dirty on some
               frontend work too! I&apos;m educated in the subject of
               machine learning combined with practical experience in several projects, mostly focusing on research in the fields of 
-              generative ai, artistic style transfer & computer vision. I recently fell into the rabbit hole of graphics and all the 
-              things that come with it. So I&apos;m getting my feet wet with that! 
+              generative ai, artistic style transfer & computer vision.
             </p>
             <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
               I&apos;ve got an extensive toolkit to tackle any kind of problem with, which you can check out in the
@@ -74,10 +73,9 @@ const InnerAbout = () => {
               tool for the job.
             </p>
             <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-              Recently graduated as a bachelor in applied informatics, I am on the lookout for a new challenge: <span className='text-highlight font-extrabold'>A job! </span>
-              While I am actively searching for a job, I still want to expand my knowledge in the field of computer science and
+              Besides my job I am looking to deepen my knowledge in the field of computer science even further and
               that&apos;s why I will be starting my master&apos;s degree in applied informatics this fall
-              in night school along side the job I will hopefully have by then!
+              in night school.
             </p>
 
             <div className='mt-4 flex flex-wrap items-center'>
